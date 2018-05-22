@@ -1,0 +1,41 @@
+.project {
+  position: relative;
+  width: 100%;
+  padding: size(large);
+}
+
+.project__item {
+  margin-bottom: size(large);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.project__item--inline {
+  display: flex;
+
+  @include breakpoint(large up) {
+    flex-wrap: no-wrap;
+  }
+}
+
+.project__item--inline {
+
+  > *:nth-child(odd) {
+    padding-right: size(medium);
+  }
+
+  > *:nth-child(even) {
+    padding-left: size(medium);
+  }
+}
+
+.project__label {
+  padding-top: size(small);
+
+  p {
+    font-size: 12px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,81 @@
+.fmt {
+  position: relative;
+  width: 100%;
+  padding: size(large);
+  font-size: 14px;
+
+  > * {
+    padding: size(gutter) 0;
+  }
+
+  > *:first-child {
+    padding-top: 0;
+  }
+
+  > *:last-child {
+    padding-bottom: 0;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  h6 {
+    font-size: 14px;
+  }
+
+  blockquote {
+    padding: 0 size(gutter);
+    color: color(mid);
+    font-style: italic;
+  }
+
+  ul {
+    list-style: disc;
+    list-style-position: inside;
+  }
+
+  ol {
+    counter-reset: counter;
+  }
+
+  ol li {
+    position: relative;
+    padding-left: 20px;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: counter(counter)'.';
+      counter-increment: counter;
+    }
+  }
+
+  a {
+    border-bottom: 1px solid;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: calc(100vh - 80px);
+    margin: 0 auto;
+    object-fit: contain;
+  }
+}

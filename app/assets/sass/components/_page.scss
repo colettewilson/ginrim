@@ -1,0 +1,11 @@
+.page {
+  display: flex;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  @include breakpoint(large up) {
+    width: calc(100% / 12 * 10); // Space remaining after side-nav
+    margin-left: calc(100% / 12 * 2);
+  }
+}

@@ -1,0 +1,12 @@
+{% extends "_layout" %}
+
+{% block content %}
+
+	{% switch entry.type %}
+		{% case "verticalLayout" %}
+			{% include "/project/_layouts/vertical-layout" %}
+		{% default %}
+			{% include "/project/_layouts/horizontal-layout" %}
+	{% endswitch %}
+
+{% endblock %}

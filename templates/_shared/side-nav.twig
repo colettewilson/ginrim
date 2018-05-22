@@ -1,0 +1,34 @@
+<nav class="side-nav">
+	<div class="grid-container">
+		<div class="grid-x grid-padding-x">
+			<div class="small-12 cell">
+				<div class="side-nav__inner">
+					<div class="side-nav__main">
+						<a class="side-nav__link logo" href="/">{{ siteName }}</a>
+					</div>
+					<ul class="side-nav__list">
+						{% for project in craft.entries.section("Project") %}
+							<li class="side-nav__item">
+								<a class="side-nav__link logo" href="{{ project.url }}">{{ project.title }}</a>
+							</li>
+						{% endfor %}
+					</ul>
+					<ul class="side-nav__list">
+						<li class="side-nav__item">
+							<a class="side-nav__link logo" href="/editions">Editions</a>
+						</li>
+						<li class="side-nav__item">
+							<a class="side-nav__link logo" href="/about">About</a>
+						</li>
+						<li class="side-nav__item">
+							<a class="side-nav__link logo" href="/artists-statement">Artist Statement</a>
+						</li>
+					</ul>
+					<div class="side-nav__footer">
+						{% include "_shared/footer" %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>

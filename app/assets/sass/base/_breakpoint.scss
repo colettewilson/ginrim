@@ -1,0 +1,46 @@
+// Breakpoint (for passing MQs to JS)
+//------------------------------------------------------------------------------
+
+body::before,
+body::after {
+  display: none;
+}
+
+
+$list: ();
+
+// Merge Foundation breakpoints with custom additions.
+$custom-breakpoints: () !default;
+$all-breakpoints: map-merge($breakpoints, $custom-breakpoints);
+
+// Create list of breakpoints & sort small to large.
+$mq-min-widths: ();
+@each $name, $value in $all-breakpoints {
+  $mq-min-widths: append($mq-min-widths, $value);
+}
+$mq-min-widths: quick-sort($mq-min-widths);
+
+@each $width in $mq-min-widths {
+  @each $breakpoint-name, $breakpoint-value in $all-breakpoints {
+    @if $breakpoint-value == $width {
+      $list: append($list, $breakpoint-name, space);
+      $name: ();
+
+      @each $breakpoint-name-b, $breakpoint-value-b in $all-breakpoints {
+        @if $breakpoint-value-b <= $breakpoint-value {
+          $name: append($name, $breakpoint-name-b, space);
+        }
+      }
+
+      @media only screen and (min-width: #{$breakpoint-value}) {
+        body::before {
+          content: '#{$name}';
+        }
+      }
+    }
+  }
+}
+
+body::after {
+  content: '#{$list}';
+}

@@ -1,0 +1,34 @@
+<div class="project">
+	{% for block in entry.projectImages %}
+		{% switch block.type %}
+			{% case 'halfWidthImages' %}
+				<div class="project__item project__item--inline">
+					{% for row in block.images %}
+						<div>
+							<div class="project__image">
+								<picture>
+									<img src="{{ row.image.first().url }}" alt="{{ row.image.first().title }}">
+								</picture>
+							</div>
+							<div class="project__label">
+								<p>{{ row.imageLabel }}</p>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			{% default %}
+				{% for row in block.images %}
+					<div class="project__item">
+						<div class="project__image">
+							<picture>
+								<img src="{{ row.image.first().url }}" alt="{{ row.image.first().title }}">
+							</picture>
+						</div>
+						<div class="project__label">
+							<p>{{ row.imageLabel }}</p>
+						</div>
+					</div>
+				{% endfor %}
+		{% endswitch %}
+	{% endfor %}
+</div>

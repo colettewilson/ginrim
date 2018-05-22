@@ -1,0 +1,29 @@
+html {
+  // background-color: ;
+}
+
+body {
+  // color: ;
+  // -webkit-tap-highlight-color: ;
+
+  &::selection {
+    // color: ;
+    // background-color: ;
+  }
+}
+
+button,
+select,
+input,
+textarea {
+  color: inherit;
+}
+
+a {
+  @include transition(color);
+  color: inherit;
+}
+
+a:hover {
+  color: color(mid);
+}

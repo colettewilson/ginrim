@@ -1,0 +1,12 @@
+// @param $number
+// @see http://stackoverflow.com/a/12335841
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+// Convert px value to em equivalent
+// @param $value Input px value
+// @param $px-reference Reference px size (font-size of self/parent)
+@function em($value, $px-reference: 16px) {
+  @return ($value / $px-reference) * 1em;
+}

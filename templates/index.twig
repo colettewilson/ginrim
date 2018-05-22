@@ -1,0 +1,13 @@
+{% extends "_layout" %}
+
+{% block content %}
+
+	<div class="showcase-image">
+		<div class="showcase-image__inner">
+			<picture>
+				<img src="{{ entry.featureImage.first().url }}" alt="{{ entry.featureImage.first().title }}">
+			</picture>
+		</div>
+	</div>
+
+{% endblock %}

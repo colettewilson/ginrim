@@ -1,0 +1,24 @@
+.thumbnails {
+  @include transition(visibility);
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  padding: size(large) * 2;
+  background: white;
+  visibility: hidden;
+
+  &.thumbnails-open {
+    left: 0;
+    visibility: visible;
+  }
+}
+
+.thumbnail img {
+  @include transition(filter);
+}
+
+.thumbnail img:hover {
+  filter: grayscale(20%) opacity(80%);
+}

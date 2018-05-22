@@ -1,0 +1,80 @@
+@each $size, $unit in $blocks {
+
+  .block-padding--#{$size} {
+    padding-bottom: $unit * 0.75;
+    padding-top: $unit * 0.75;
+
+    @include breakpoint(medium only) {
+      padding-bottom: $unit * 0.9;
+      padding-top: $unit * 0.9;
+    }
+
+    @include breakpoint(large up) {
+      padding-bottom: $unit;
+      padding-top: $unit;
+    }
+  }
+
+  .block-padding-t--#{$size} {
+    padding-top: $unit * 0.75;
+
+    @include breakpoint(medium only) {
+      padding-top: $unit * 0.9;
+    }
+
+    @include breakpoint(large up) {
+      padding-top: $unit;
+    }
+  }
+
+  .block-padding-b--#{$size} {
+    padding-bottom: $unit * 0.75;
+
+    @include breakpoint(medium only) {
+      padding-bottom: $unit * 0.9;
+    }
+
+    @include breakpoint(large up) {
+      padding-bottom: $unit;
+    }
+  }
+
+  .block-margin--#{$size} {
+    margin-bottom: $unit * 0.75;
+    margin-top: $unit * 0.75;
+
+    @include breakpoint(medium only) {
+      margin-bottom: $unit * 0.9;
+      margin-top: $unit * 0.9;
+    }
+
+    @include breakpoint(large up) {
+      margin-bottom: $unit;
+      margin-top: $unit;
+    }
+  }
+
+  .block-margin-t--#{$size} {
+    margin-top: $unit * 0.75;
+
+    @include breakpoint(medium only) {
+      margin-top: $unit * 0.9;
+    }
+
+    @include breakpoint(large up) {
+      margin-top: $unit;
+    }
+  }
+
+  .block-margin-b--#{$size} {
+    margin-bottom: $unit * 0.75;
+
+    @include breakpoint(medium only) {
+      margin-bottom: $unit * 0.9;
+    }
+
+    @include breakpoint(large up) {
+      margin-bottom: $unit;
+    }
+  }
+}
