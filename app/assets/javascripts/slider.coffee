@@ -1,5 +1,4 @@
 Flickity = require("flickity/dist/flickity.pkgd.js")
-Thumbnails = require("./thumbnails")
 
 class Slider
   @defaults:

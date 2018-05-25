@@ -243,6 +243,7 @@ gulp.task 'rev', ['clear:dist'], ->
   gulp.src [
     "#{paths.css}**/*.css"
     "#{paths.js}**/*.js"
+    "#{paths.sprites}**/*.svg"
   ], base: paths.docroot
   .pipe rev()
   .pipe gulp.dest paths.dist

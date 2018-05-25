@@ -5,18 +5,36 @@
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<title></title>
-		<meta name="description" content="">
+		<title>{{ entry is defined ? entry.title : title }} | {{ siteName }} | {{ seo.titleDescription }}</title>
+		{% set description %}
+			{% for description in seo.pageSpecificMetaDescription if entry is defined and description.page.first() == entry %}
+				{{ description.description }}
+			{% endfor %}
+		{% endset %}
+		<meta name="description" content="{{ description|trim is empty ? seo.generalMetaDescription : description }}">
 
 		<style>
 		  @import url("https://use.typekit.net/wuo4geg.css");
 		</style>
 
-		<script src="/media/javascripts/fonts.js"></script>
-		<link rel="stylesheet" href="/media/stylesheets/fonts.css">
-		<link rel="stylesheet" href="/media/stylesheets/app.css">
-		<script src="/media/javascripts/modernizr.js"></script>
-		<script async src="/media/javascripts/app.js"></script>
+		<script src="{{ rev('/media/javascripts/fonts.js') }}"></script>
+		<link rel="stylesheet" href="{{ rev('media/stylesheets/fonts.css') }}">
+		<link rel="stylesheet" href="{{ rev('media/stylesheets/app.css') }}">
+		<script src="{{ rev('media/javascripts/modernizr.js') }}"></script>
+		<script async src="{{ rev('media/javascripts/app.js') }}"></script>
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#787878">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="theme-color" content="#ffffff">
+
+		<meta property="og:image" content="{{ craft.entries.section("homepage").first().featureImage.first().url }}">
+		<meta property="og:title" content="{{ entry is defined ? entry.title : title }} | {{ siteName }} | {{ seo.titleDescription }}">
+		<meta property="og:description" content="{{ description|trim is empty ? seo.generalMetaDescription : description }}">
+		<meta property="og:url" content="{{ craft.request.url }}">
 	</head>
 	<body>
 		{% include "_shared/side-nav" %}

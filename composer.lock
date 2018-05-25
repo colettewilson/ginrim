@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a1f951fd9f8b872cd4e1f172d2bb1e9d",
+    "content-hash": "992a6b535d8bf96989a81c3af864c65d",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -60,6 +60,42 @@
                 "markdown-extra"
             ],
             "time": "2017-07-16T21:13:23+00:00"
+        },
+        {
+            "name": "clubstudioltd/craft-asset-rev",
+            "version": "6.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/clubstudioltd/craft-asset-rev/zipball/c7468e84b23213d858385aa462427ab8ca9b8bb5",
+                "reference": "c7468e84b23213d858385aa462427ab8ca9b8bb5",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-beta.29"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Asset Rev",
+                "handle": "assetrev",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://github.com/clubstudioltd/craft-asset-rev/blob/master/CHANGELOG.md",
+                "documentationUrl": "https://github.com/clubstudioltd/craft-asset-rev",
+                "downloadUrl": "https://github.com/clubstudioltd/craft-asset-rev/archive/v6.zip",
+                "developer": "Club Studio Ltd",
+                "developerUrl": "https://clubstudio.co.uk",
+                "class": "club\\assetrev\\AssetRev"
+            },
+            "autoload": {
+                "psr-4": {
+                    "club\\assetrev\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A plugin to aid cache-busting in Craft 3",
+            "time": "2017-11-08T14:00:15+00:00"
         },
         {
             "name": "composer/ca-bundle",

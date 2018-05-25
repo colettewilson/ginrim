@@ -1,5 +1,5 @@
 <div class="project">
-	{% for block in entry.projectImages %}
+	{% for block in entry.projectBuilder %}
 		{% switch block.type %}
 			{% case 'halfWidthImages' %}
 				<div class="project__item project__item--inline">
@@ -16,7 +16,7 @@
 						</div>
 					{% endfor %}
 				</div>
-			{% default %}
+			{% case 'fullwidthImages' %}
 				{% for row in block.images %}
 					<div class="project__item">
 						<div class="project__image">
@@ -29,6 +29,10 @@
 						</div>
 					</div>
 				{% endfor %}
+			{% default %}
+				<div class="fmt fmt--unpadded">
+					{{ block.text }}
+				</div>
 		{% endswitch %}
 	{% endfor %}
 </div>
