@@ -19,6 +19,6 @@ return [
         // A prefix to apply to your asset filenames when they are output. You would
         // likely want to set this if the paths in your manifest file are going to
         // be different to the final intended asset URL.
-        'assetUrlPrefix' => '/public/dist/',
+        'assetUrlPrefix' => '/dist/',
     ],
 ];
