@@ -15,7 +15,9 @@
 
 .side-nav__inner {
   position: relative;
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
+  overflow: scroll;
 
   > * {
     width: 100%;
@@ -44,6 +46,23 @@
 
 .side-nav__item:last-child {
   padding-bottom: 0;
+}
+
+.side-nav__dropdown {
+  height: 0;
+  padding: 0 0 0 size(small);
+  transition: height 295ms 0, visibility 295ms 295ms;
+  visibility: hidden;
+
+  > .side-nav__item:first-child {
+    padding-top: size(small);
+  }
+
+  .side-nav__item.dropdown-is-open & {
+    height: auto;
+    transition: height 295ms 295ms, visibility 295ms 0;
+    visibility: visible;
+  }
 }
 
 .side-nav__footer {

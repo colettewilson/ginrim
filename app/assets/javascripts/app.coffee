@@ -10,6 +10,7 @@ app = {}
 app.setup = ->
   sectionReady.addComponents([
     # A list of class names matched to components, e.g.:
+    {class: "js-nav", Component: require("./nav")}
     {class: "js-slider", Component: require("./slider")}
   ])
 

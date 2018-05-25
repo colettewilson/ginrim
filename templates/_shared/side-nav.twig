@@ -1,4 +1,4 @@
-<nav class="side-nav">
+<nav class="js-nav side-nav">
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x">
 			<div class="small-12 cell">
@@ -7,11 +7,16 @@
 						<a class="side-nav__link logo" href="/">{{ siteName }}</a>
 					</div>
 					<ul class="side-nav__list">
-						{% for project in craft.entries.section("Project") %}
-							<li class="side-nav__item">
-								<a class="side-nav__link logo" href="{{ project.url }}">{{ project.title }}</a>
-							</li>
-						{% endfor %}
+						<li class="js-nav-dropdown-trigger side-nav__item">
+								<a class="side-nav__link" href="">Work</a>
+								<ul class="js-nav-dropdown side-nav__dropdown">
+									{% for project in craft.entries.section("Project") %}
+										<li class="side-nav__item">
+											<a class="side-nav__link" href="{{ project.url }}">{{ project.title }}</a>
+										</li>
+									{% endfor %}
+								</ul>
+						</li>
 					</ul>
 					<ul class="side-nav__list">
 						<li class="side-nav__item">
