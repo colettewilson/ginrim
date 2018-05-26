@@ -1,0 +1,11 @@
+.header {}
+
+.header__inner {
+  display: flex;
+  padding: size(small) size(large);
+  justify-content: space-between;
+}
+
+.header__nav {
+  display: none;
+}

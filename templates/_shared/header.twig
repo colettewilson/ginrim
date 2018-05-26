@@ -1,0 +1,44 @@
+<header class="page__header">
+	<div class="header__inner">
+		<div class="">
+			<a class="logo" href="/">{{ siteName }}</a>
+		</div>
+			<button class="burger" type="button">
+				<div class="burger__part burger__top"></div>
+				<div class="burger__part burger__middle"></div>
+				<div class="burger__part burger__bottom"></div>
+			</button>
+	</div>
+	<nav class="js-nav header__nav">
+		<div class="grid-container">
+			<div class="grid-x grid-padding-x">
+				<div class="small-12 cell">
+					<div class="side-nav__inner">
+						<ul class="side-nav__list">
+							<li class="js-nav-dropdown-trigger side-nav__item">
+									<a class="side-nav__link" href="">Work</a>
+									<ul class="js-nav-dropdown side-nav__dropdown">
+										{% for project in craft.entries.section("Project") %}
+											<li class="side-nav__item">
+												<a class="side-nav__link" href="{{ project.url }}">{{ project.title }}</a>
+											</li>
+										{% endfor %}
+									</ul>
+							</li>
+							<li class="side-nav__item">
+								<a class="side-nav__link logo" href="/editions">Editions</a>
+							</li>
+							<li class="side-nav__item">
+								<a class="side-nav__link logo" href="/about">About</a>
+							</li>
+							<li class="side-nav__item">
+								<a class="side-nav__link logo" href="/artists-statement">Artist Statement</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>
+

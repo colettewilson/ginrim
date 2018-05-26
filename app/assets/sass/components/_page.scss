@@ -9,3 +9,26 @@
     margin-left: calc(100% / 12 * 2);
   }
 }
+
+.page__header,
+.page__footer {
+
+  @include breakpoint(large up) {
+    display: none;
+  }
+}
+
+.page__header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.page__footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: size(medium) size(large);
+}

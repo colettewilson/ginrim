@@ -1,0 +1,43 @@
+$mobile-nav-icon-height: 2Px;
+$mobile-nav-icon-gap: 4Px;
+$mobile-nav-icon-width: 22Px;
+
+.burger {
+  position: relative;
+  cursor: pointer;
+
+  @include breakpoint(large up) {
+    display: none;
+  }
+}
+
+.burger__part {
+  @include transition(transform);
+  display: block;
+  width: $mobile-nav-icon-width;
+  height: $mobile-nav-icon-height;
+  margin: $mobile-nav-icon-gap auto;
+  background-color: black;
+}
+
+.burger__top {
+  margin-top: 0;
+
+  .burger.is-open & {
+    transform: translate(0, ($mobile-nav-icon-height + $mobile-nav-icon-gap)) rotate(45deg);
+  }
+}
+
+.burger__middle {
+  .burger.is-open & {
+    transform: scaleX(0);
+  }
+}
+
+.burger__bottom {
+  margin-bottom: 0;
+
+  .burger.is-open & {
+    transform: translate(0, -($mobile-nav-icon-height + $mobile-nav-icon-gap)) rotate(-45deg);
+  }
+}
