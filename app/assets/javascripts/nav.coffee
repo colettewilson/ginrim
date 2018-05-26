@@ -1,17 +1,44 @@
 class Nav
   @defaults:
+    navTrigger: ".js-nav-trigger"
+    mobileNav: ".js-mobile-nav"
     dropdownTrigger: ".js-nav-dropdown-trigger"
     dropdown: ".js-nav-dropdown"
     dropdownOpenClass: "dropdown-is-open"
+    navOpenClass: "nav-is-open"
 
   constructor: (@$wrap) ->
     @options = Nav.defaults
+    @$navTrigger = $(document).find(@options.navTrigger)
+    @$nav = $(document).find(@options.mobileNav)
     @$dopdownTrigger = @$wrap.find(@options.dropdownTrigger)
     @$dopdown = @$wrap.find(@options.dropdown)
+    @minWidth = 1024
 
-    @$dopdownTrigger.on("click", @onTriggerClick)
+    @setupNav()
+    $(window).on("resize", @setupNav)
+    @$dopdownTrigger.on("click", @onDropdownTriggerClick)
 
-  onTriggerClick: (evt) =>
+  setupNav: =>
+    if $(window).width() < @minWidth
+      @$navTrigger.on("click", @onNavTriggerClick)
+    else
+      @$navTrigger.off("click", @onNavTriggerClick)
+
+  onNavTriggerClick: =>
+    if @isNavOpen then @closeNav() else @openNav()
+
+  openNav: =>
+    unless @isNavOpen
+      @isNavOpen = true
+      @$nav.addClass(@options.navOpenClass)
+
+  closeNav: =>
+    if @isNavOpen
+      @isNavOpen = false
+      @$nav.removeClass(@options.navOpenClass)
+
+  onDropdownTriggerClick: (evt) =>
     if !($(evt.target).hasClass("js-nav-dropdown-link"))
       evt.preventDefault()
       if @isOpen then @closeDropdown() else @openDropdown()

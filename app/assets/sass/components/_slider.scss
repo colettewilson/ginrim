@@ -9,21 +9,23 @@
   position: absolute;
   top: size(large);
   right: size(large);
-  width: 24px;
-  height: 24px;
   padding-bottom: size(medium);
-  font-size: 0;
-  background: linear-gradient(to left, transparent, transparent 10px, white 10px, white 14px, transparent 14px, transparent),
-    linear-gradient(to top, transparent, transparent 10px, white 10px, white 14px, transparent 14px, transparent);
-  background-color: black;
+  font-size: 12px;
   cursor: pointer;
   z-index: 99;
 
+  span:nth-child(2) {
+    display: none;
+  }
+
   &.thumbnails-open {
-    background-color: white;
-    background: linear-gradient(to left, transparent, transparent 10px, black 10px, black 14px, transparent 14px, transparent),
-    linear-gradient(to top, transparent, transparent 10px, black 10px, black 14px, transparent 14px, transparent);
-    transform: rotate(45deg);
+    span:first-child {
+      display: none;
+    }
+
+    span:nth-child(2) {
+      display: block;
+    }
   }
 }
 

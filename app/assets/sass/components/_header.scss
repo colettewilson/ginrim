@@ -7,5 +7,31 @@
 }
 
 .header__nav {
-  display: none;
+
+  @include breakpoint(medium down) {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    visibility: hidden;
+    z-index: 15;
+
+    &.nav-is-open {
+      left: 0;
+      visibility: visible;
+    }
+  }
+
+  @include breakpoint(large up) {
+    display: none;
+  }
+}
+
+.header__nav__inner {
+  width: 100%;
+  padding: size(large) * 2 size(large);
+  overflow-y: scroll;
 }
