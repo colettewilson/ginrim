@@ -12,7 +12,7 @@
 								<ul class="js-nav-dropdown side-nav__dropdown">
 									{% for project in craft.entries.section("Project") %}
 										<li class="side-nav__item">
-											<a class="side-nav__link" href="{{ project.url }}">{{ project.title }}</a>
+											<a class="js-nav-dropdown-link side-nav__link" href="{{ project.url }}">{{ project.title }}</a>
 										</li>
 									{% endfor %}
 								</ul>

@@ -12,8 +12,9 @@ class Nav
     @$dopdownTrigger.on("click", @onTriggerClick)
 
   onTriggerClick: (evt) =>
-    evt.preventDefault()
-    if @isOpen then @closeDropdown() else @openDropdown()
+    if !($(evt.target).hasClass("js-nav-dropdown-link"))
+      evt.preventDefault()
+      if @isOpen then @closeDropdown() else @openDropdown()
 
   openDropdown: =>
     unless @isOpen
