@@ -3,11 +3,16 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
+  overflow-y: scroll;
   z-index: 10;
 
   @include breakpoint(large up) {
     width: calc(100% / 12 * 10); // Space remaining after side-nav
     margin-left: calc(100% / 12 * 2);
+  }
+
+  @include breakpoint(medium down) {
+    padding: size(large) 0;
   }
 }
 

@@ -34,18 +34,18 @@
 	</head>
 	<body>
 		{% include "_shared/side-nav" %}
-		{% include "_shared/header" %}
 
 		<div class="page">
+			{% include "_shared/header" %}
 			{% block content %}
 				<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
 				<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
 			{% endblock %}
+			<div class="page__footer">
+				{% include "_shared/footer" %}
+			</div>
 		</div>
 
-		<div class="page__footer">
-			{% include "_shared/footer" %}
-		</div>
 
 	</body>
 </html>
