@@ -1,10 +1,14 @@
 .project {
   position: relative;
   width: 100%;
-  padding: size(large);
+  padding: size(medium);
 
   img {
     width: 100%;
+  }
+
+  @include breakpoint(medium up) {
+    padding: size(large);
   }
 }
 
@@ -66,8 +70,11 @@
 }
 
 .project__image {
-  width: 50%;
   margin-bottom: size(large);
+
+  @include breakpoint(large up) {
+    width: 50%;
+  }
 }
 
 .project__image:last-child {
