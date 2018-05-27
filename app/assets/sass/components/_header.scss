@@ -2,8 +2,12 @@
 
 .header__inner {
   display: flex;
-  padding: size(small) size(large);
+  padding: size(small) size(medium);
   justify-content: space-between;
+
+  @include breakpoint(medium only) {
+    padding: size(small) size(large);
+  }
 }
 
 .header__nav {

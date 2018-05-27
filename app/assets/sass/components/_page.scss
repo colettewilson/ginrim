@@ -35,5 +35,9 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: size(small) size(large);
+  padding: size(small) size(medium);
+
+  @include breakpoint(medium only) {
+    padding: size(small) size(large);
+  }
 }

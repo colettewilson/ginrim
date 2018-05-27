@@ -1,43 +1,47 @@
-<div class="slider">
-	<div class="js-slider-toggle slider__toggle">
-		<span class="toggle-open" aria-label="Open thumbnail view">Thumbnails</span>
-		<span class="toggle-close" aria-label="Close thumbnail view" aria-hidden="true">Close</span>
-	</div>
-	<div class="js-slider slider__inner">
-		{% for row in entry.sliderImages %}
-			<div class="js-slide slide">
-				<img src="{{ row.image.first().url }}" alt="{{ row.image.first().title }}">
-				{% if row.imageLabel|trim is not empty %}
-					<div class="slide__label">
-						<p>{{ row.imageLabel }}</p>
-					</div>
-				{% endif %}
+<div class="grid-x align-center">
+	<div class="large-8 cell">
+		<div class="slider">
+			<div class="js-slider-toggle slider__toggle">
+				<span class="toggle-open" aria-label="Open thumbnail view">Thumbnails</span>
+				<span class="toggle-close" aria-label="Close thumbnail view" aria-hidden="true">Close</span>
 			</div>
-		{% endfor %}
-	</div>
-	<div class="js-thumbnails thumbnails">
-		<div class="grid-x grid-margin-x small-up-2 medium-up-4 large-up-6">
-			{% for row in entry.sliderImages %}
-				<div class="cell">
-					<a class="js-slider-thumb" href="">
-						<picture class="thumbnail">
-							<img src="{{ row.image.first().getUrl('thumbnail') }}" alt="{{ row.image.first().title }}">
-						</picture>
-					</a>
+			<div class="js-slider slider__inner">
+				{% for row in entry.sliderImages %}
+					<div class="js-slide slide">
+						<img src="{{ row.image.first().url }}" alt="{{ row.image.first().title }}">
+						{% if row.imageLabel|trim is not empty %}
+							<div class="slide__label">
+								<p>{{ row.imageLabel }}</p>
+							</div>
+						{% endif %}
+					</div>
+				{% endfor %}
+			</div>
+			<div class="js-thumbnails thumbnails">
+				<div class="grid-x grid-margin-x small-up-2 medium-up-4 large-up-6">
+					{% for row in entry.sliderImages %}
+						<div class="cell">
+							<a class="js-slider-thumb" href="">
+								<picture class="thumbnail">
+									<img src="{{ row.image.first().getUrl('thumbnail') }}" alt="{{ row.image.first().title }}">
+								</picture>
+							</a>
+						</div>
+					{% endfor %}
 				</div>
-			{% endfor %}
+			</div>
 		</div>
+		{% if entry.text|trim %}
+			<div class="grid-container">
+				<div class="grid-x">
+					<div class="large-8 cell">
+						<div class="fmt">
+							{{ entry.text }}
+						</div>
+					</div>
+				</div>
+			</div>
+		{% endif %}
 	</div>
 </div>
-{% if entry.text|trim %}
-	<div class="grid-container">
-		<div class="grid-x">
-			<div class="large-8 cell">
-				<div class="fmt">
-					{{ entry.text }}
-				</div>
-			</div>
-		</div>
-	</div>
-{% endif %}
 
