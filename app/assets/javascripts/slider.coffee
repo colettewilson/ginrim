@@ -68,5 +68,6 @@ class Slider
       # Show correct aria label
       @$toggleCloseLabel.attr("aria-hidden", true)
       @$toggleOpenLabel.attr("aria-hidden", false)
+      @flickity.focus()
 
 module.exports = Slider

@@ -1,4 +1,9 @@
 <div class="slider">
+	{% if entry.text|trim %}
+		<div class="fmt fmt--unpadded">
+			{{ entry.text }}
+		</div>
+	{% endif %}
 	<div class="js-slider-toggle slider__toggle">
 		<span class="toggle-open" aria-label="Open thumbnail view">Thumbnails</span>
 		<span class="toggle-close" aria-label="Close thumbnail view" aria-hidden="true">Close</span>
