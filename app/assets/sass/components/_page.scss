@@ -1,9 +1,7 @@
 .page {
-  display: flex;
   position: relative;
   width: 100%;
   min-height: 100vh;
-  overflow-y: scroll;
   z-index: 10;
 
   @include breakpoint(large up) {

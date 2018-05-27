@@ -1,9 +1,9 @@
+{% if entry.text|trim %}
+	<div class="fmt">
+		{{ entry.text }}
+	</div>
+{% endif %}
 <div class="slider">
-	{% if entry.text|trim %}
-		<div class="fmt fmt--unpadded">
-			{{ entry.text }}
-		</div>
-	{% endif %}
 	<div class="js-slider-toggle slider__toggle">
 		<span class="toggle-open" aria-label="Open thumbnail view">Thumbnails</span>
 		<span class="toggle-close" aria-label="Close thumbnail view" aria-hidden="true">Close</span>
@@ -11,9 +11,7 @@
 	<div class="js-slider slider__inner">
 		{% for row in entry.sliderImages %}
 			<div class="js-slide slide">
-				<picture>
-					<img src="{{ row.image.first().url }}" alt="{{ row.image.first().title }}">
-				</picture>
+				<img src="{{ row.image.first().url }}" alt="{{ row.image.first().title }}">
 				{% if row.imageLabel|trim is not empty %}
 					<div class="slide__label">
 						<p>{{ row.imageLabel }}</p>

@@ -26,6 +26,9 @@
 }
 
 .footer__copy {
-  margin-top: size(small);
   font-size: 12px;
+
+  @include breakpoint(large up) {
+    margin-top: size(small);
+  }
 }

@@ -1,11 +1,21 @@
 <div class="project">
 	{% for block in entry.projectBuilder %}
 		{% switch block.type %}
-			{% case 'halfWidthImages' %}
-				<div class="project__item project__item--inline">
+			{% case "halfWidthImages" %}
+				{% set positionClass %}
+					{% switch block.imagePosition.value %}
+						{% case "right" %}
+							{{ "project__item--right" }}
+						{% case "center" %}
+							{{ "project__item--center" }}
+						{% default %}
+							{{ "project__item--left" }}
+					{% endswitch %}
+				{% endset %}
+				<div class="project__item project__item--inline {{ block.images|length < 2 ? positionClass|trim }}">
 					{% for row in block.images %}
-						<div>
-							<div class="project__image">
+						<div class="project__image">
+							<div>
 								<picture>
 									<img src="{{ row.image.first().url }}" alt="{{ row.image.first().title }}">
 								</picture>
@@ -16,10 +26,10 @@
 						</div>
 					{% endfor %}
 				</div>
-			{% case 'fullwidthImages' %}
+			{% case "fullwidthImages" %}
 				{% for row in block.images %}
 					<div class="project__item">
-						<div class="project__image">
+						<div>
 							<picture>
 								<img src="{{ row.image.first().url }}" alt="{{ row.image.first().title }}">
 							</picture>
@@ -30,7 +40,7 @@
 					</div>
 				{% endfor %}
 			{% default %}
-				<div class="fmt fmt--unpadded">
+				<div class="project__item fmt fmt--unpadded">
 					{{ block.text }}
 				</div>
 		{% endswitch %}
