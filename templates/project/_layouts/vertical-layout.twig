@@ -40,8 +40,14 @@
 					</div>
 				{% endfor %}
 			{% default %}
-				<div class="project__item fmt fmt--unpadded">
-					{{ block.text }}
+				<div class="project__item">
+					<div class="grid-x">
+						<div class="large-8 cell">
+							<div class="fmt fmt--unpadded">
+								{{ block.text }}
+							</div>
+						</div>
+					</div>
 				</div>
 		{% endswitch %}
 	{% endfor %}

@@ -1,8 +1,3 @@
-{% if entry.text|trim %}
-	<div class="fmt">
-		{{ entry.text }}
-	</div>
-{% endif %}
 <div class="slider">
 	<div class="js-slider-toggle slider__toggle">
 		<span class="toggle-open" aria-label="Open thumbnail view">Thumbnails</span>
@@ -34,4 +29,15 @@
 		</div>
 	</div>
 </div>
+{% if entry.text|trim %}
+	<div class="grid-container">
+		<div class="grid-x">
+			<div class="large-8 cell">
+				<div class="fmt">
+					{{ entry.text }}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endif %}
 
