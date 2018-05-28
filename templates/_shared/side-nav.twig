@@ -33,7 +33,6 @@
 		<ul class="side-nav__list">
 			{% for row in socialMedia.socialMediaLinks %}
 				<li class="side-nav__item--inline">
-					{{ dump(row.accountLink) }}
 					<a href="{{ row.link }}">
 						<i class="icon icon--ui__{{ row.platform.value }}">
 							<svg focusable="false"><use xlink:href="/media/images/sprites/ui.svg#{{ row.platform.value }}"></use></svg>
