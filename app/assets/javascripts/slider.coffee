@@ -15,6 +15,7 @@ class Slider
     toggleOpenLabel: ".toggle-open"
     toggleCloseLabel: ".toggle-close"
     thumbnailsOpenClass: "thumbnails-open"
+    noScrollClass: "no-scroll"
 
   constructor: (@$wrap) ->
     @options = Slider.defaults
@@ -52,9 +53,12 @@ class Slider
   openThmbnails: =>
     unless @isOpen
       @isOpen = true
+      @top = $(window).scrollTop()
 
       @$sliderToggle.addClass(@options.thumbnailsOpenClass)
       @$thumbnails.addClass(@options.thumbnailsOpenClass)
+      $("body").addClass(@options.noScrollClass)
+      $("body").css("top", -@top)
 
       # Show correct aria label
       @$toggleOpenLabel.attr("aria-hidden", true)
@@ -66,6 +70,9 @@ class Slider
 
       @$sliderToggle.removeClass(@options.thumbnailsOpenClass)
       @$thumbnails.removeClass(@options.thumbnailsOpenClass)
+      $("body").removeClass(@options.noScrollClass)
+      $("body").css('top', '')
+      $(window).scrollTop(@top)
 
       # Show correct aria label
       @$toggleCloseLabel.attr("aria-hidden", true)
