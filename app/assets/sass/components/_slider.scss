@@ -55,6 +55,11 @@
   padding: size(large);
   align-items: center;
 
+  a {
+    display: block;
+    width: 100%;
+  }
+
   img {
     width: 100%;
     height: calc(100vh - 160px);
