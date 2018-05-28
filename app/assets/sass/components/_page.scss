@@ -5,8 +5,8 @@
   z-index: 10;
 
   @include breakpoint(large up) {
-    width: calc(100% / 12 * 10); // Space remaining after side-nav
-    margin-left: calc(100% / 12 * 2);
+    width: calc(100% / 12 * 9); // Space remaining after side-nav
+    margin-left: calc(100% / 12 * 3);
   }
 
   @include breakpoint(medium down) {

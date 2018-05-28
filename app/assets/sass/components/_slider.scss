@@ -41,7 +41,7 @@
   display: flex;
   width: 100%;
   height: auto;
-  padding: size(large) size(medium) size(medium);
+  padding: size(large) size(large) * 2 size(medium);
   align-items: center;
 
   img {

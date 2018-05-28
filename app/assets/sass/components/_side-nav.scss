@@ -8,8 +8,9 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: calc(100% / 12 * 2);
+    width: calc(100% / 12 * 3);
     height: 100vh;
+    padding: 0 size(large);
   }
 }
 
@@ -63,6 +64,10 @@
     transition: height 295ms 295ms, visibility 295ms 0;
     visibility: visible;
   }
+}
+
+.side-nav__link.is-active {
+  color: color(mid);
 }
 
 .side-nav__footer {

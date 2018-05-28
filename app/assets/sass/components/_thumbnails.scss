@@ -8,7 +8,6 @@
   padding: size(large) * 2;
   background: white;
   visibility: hidden;
-  z-index: 1;
 
   &.thumbnails-open {
     left: 0;

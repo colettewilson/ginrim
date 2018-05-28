@@ -1,11 +1,11 @@
 <div class="grid-x align-center">
-	<div class="small-12 medium-11 large-9 cell">
+	<div class="small-12 large-10 cell">
 		<div class="slider">
 			<div class="js-slider-toggle slider__toggle">
 				<span class="toggle-open" aria-label="Open thumbnail view">Thumbnails</span>
 				<span class="toggle-close" aria-label="Close thumbnail view" aria-hidden="true">Close</span>
 			</div>
-			<div class="js-slider slider__inner">
+			<div class="js-slider slider__inner" tabindex="0">
 				{% for row in entry.sliderImages %}
 					<div class="js-slide slide">
 						<img src="{{ row.image.first().url }}" alt="{{ row.image.first().title }}">
