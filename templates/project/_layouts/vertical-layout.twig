@@ -27,11 +27,7 @@
 					{% case "fullwidthImages" %}
 						{% for row in block.images %}
 							<div class="project__item">
-								<div>
-									<picture>
-										<img src="{{ row.image.first().url }}" alt="{{ row.image.first().title }}">
-									</picture>
-								</div>
+								<img src="{{ row.image.first().url }}" alt="{{ row.image.first().title }}">
 								<div class="project__label">
 									<p>{{ row.imageLabel }}</p>
 								</div>
