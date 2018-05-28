@@ -14,17 +14,20 @@
     height: 100%;
     padding: size(large) * 2 size(medium);
     object-fit: contain;
-    object-position: left;
   }
 
   @include breakpoint(medium only) {
-    padding: size(large) * 2 size(large);
+
+    img {
+      padding: size(large) * 2 size(large);
+    }
   }
 
   @include breakpoint(large up) {
 
     img {
       padding: size(large) * 2 size(large) size(large) * 2 size(large) * 2;
+      object-position: left;
     }
   }
 }
