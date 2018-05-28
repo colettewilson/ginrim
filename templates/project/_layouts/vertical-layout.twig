@@ -17,7 +17,9 @@
 						<div class="project__item project__item--inline {{ block.images|length < 2 ? positionClass|trim }}">
 							{% for row in block.images %}
 								<div class="project__image">
-									<img src="{{ row.image.first().url }}" alt="{{ row.image.first().title }}">
+									<a class="js-gallery-item" href="{{ row.image.first().url }}">
+										<img src="{{ row.image.first().url }}" alt="{{ row.image.first().title }}">
+									</a>
 									<div class="project__label">
 										<p>{{ row.imageLabel }}</p>
 									</div>
@@ -27,7 +29,9 @@
 					{% case "fullwidthImages" %}
 						{% for row in block.images %}
 							<div class="project__item">
-								<img src="{{ row.image.first().url }}" alt="{{ row.image.first().title }}">
+								<a class="js-gallery-item" href="{{ row.image.first().url }}">
+									<img src="{{ row.image.first().url }}" alt="{{ row.image.first().title }}">
+								</a>
 								<div class="project__label">
 									<p>{{ row.imageLabel }}</p>
 								</div>
