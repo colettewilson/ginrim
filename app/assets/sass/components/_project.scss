@@ -19,6 +19,12 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  img {
+    max-height: 100vh;
+    margin: auto;
+    object-fit: contain;
+  }
 }
 
 .project__item--inline {
@@ -73,12 +79,6 @@
 .project__image {
   width: 100%;
   margin-bottom: size(large);
-
-  img {
-    max-height: 100%;
-    margin: auto;
-    object-fit: contain;
-  }
 
   @include breakpoint(large up) {
     width: 50%;
