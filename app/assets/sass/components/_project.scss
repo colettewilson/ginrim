@@ -13,6 +13,7 @@
 }
 
 .project__item {
+  max-height: 100vh;
   margin-bottom: size(large);
 
   &:last-child {
@@ -70,6 +71,7 @@
 }
 
 .project__image {
+  width: 100%;
   margin-bottom: size(large);
 
   @include breakpoint(large up) {
