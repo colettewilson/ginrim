@@ -7,7 +7,7 @@
 
 		<title>{{ entry is defined ? entry.title : title }} | {{ siteName }} | {{ seo.titleDescription }}</title>
 		{% set description %}
-			{% for description in seo.pageSpecificMetaDescription if entry is defined and description.page.first() == entry %}
+			{% for description in seo.pageSpecificMetaDescription if entry is defined and description.page.first().title == entry.title %}
 				{{ description.description }}
 			{% endfor %}
 		{% endset %}
