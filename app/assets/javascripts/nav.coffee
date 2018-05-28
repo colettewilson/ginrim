@@ -16,8 +16,12 @@ class Nav
     @minWidth = 1024
 
     @setupNav()
-    $(window).on("resize", @setupNav)
+    $(window).on("resize", @resizeEvent)
     @$dopdownTrigger.on("click", @onDropdownTriggerClick)
+
+  resizeEvent: =>
+    @closeNav()
+    @setupNav()
 
   setupNav: =>
     if $(window).width() < @minWidth
