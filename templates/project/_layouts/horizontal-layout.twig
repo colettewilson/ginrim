@@ -1,5 +1,5 @@
 <div class="grid-x align-center">
-	<div class="small-12 large-10 cell">
+	<div class="small-12 large-11 large-offset-1 cell">
 		<div class="slider">
 			<div class="js-slider-toggle slider__toggle">
 				<span class="toggle-open" aria-label="Open thumbnail view">Thumbnails</span>
@@ -7,7 +7,17 @@
 			</div>
 			<div class="js-slider slider__inner" tabindex="0">
 				{% for row in entry.sliderImages %}
-					<div class="js-slide slide">
+					{% set positionClass %}
+						{% switch row.imagePosition.value %}
+							{% case "right" %}
+								{{ "slide--right" }}
+							{% case "center" %}
+								{{ "slide--center" }}
+							{% default %}
+								{{ "slide--left" }}
+						{% endswitch %}
+					{% endset %}
+					<div class="js-slide slide {{ positionClass|trim }}">
 						<img src="{{ row.image.first().url }}" alt="{{ row.image.first().title }}">
 						{% if row.imageLabel|trim is not empty %}
 							<div class="slide__label">
@@ -32,12 +42,10 @@
 			</div>
 		</div>
 		{% if entry.text|trim %}
-			<div class="grid-container">
-				<div class="grid-x">
-					<div class="large-8 cell">
-						<div class="fmt">
-							{{ entry.text }}
-						</div>
+			<div class="grid-x">
+				<div class="large-8 cell">
+					<div class="fmt">
+						{{ entry.text }}
 					</div>
 				</div>
 			</div>

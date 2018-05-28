@@ -1,7 +1,8 @@
 .slider {
   position: relative;
   width: 100%;
-  padding: size(large);
+  padding-top: size(large);
+  padding-right: size(large);
 }
 
 .slider__toggle {
@@ -41,18 +42,53 @@
   display: flex;
   width: 100%;
   height: auto;
-  padding: size(large) size(large) * 2 size(medium);
+  padding: size(large) size(large) size(medium);
   align-items: center;
 
   img {
-    width: auto;
-    max-width: 100%;
+    width: 100%;
     height: auto;
     max-height: calc(100vh - 180px);
-    margin: auto;
     object-fit: contain;
   }
 }
+
+.slide--left {
+
+  img {
+    object-position: left center;
+  }
+
+  .slide__label {
+    padding: 0 size(large) * 2;
+    text-align: left;
+  }
+}
+
+.slide--right {
+
+  img {
+    object-position: right center;
+  }
+
+  .slide__label {
+    padding: 0 size(large) 0 size(large) * 2;
+    text-align: right;
+  }
+}
+
+.slide--center {
+
+  img {
+    margin: auto;
+  }
+  .slide__label {
+    padding: 0 size(large) * 2;
+    text-align: center;
+  }
+}
+
+
 
 .slide__label {
   position: absolute;
@@ -60,11 +96,6 @@
   left: 0;
   bottom: 0;
   font-size: 12px;
-  text-align: center;
-
-  span {
-    @include font-brother-1816(400, italic);
-  }
 }
 
 // Flickity overrides
@@ -75,10 +106,8 @@
 
 .flickity-button {
   position: absolute;
-  top: 50%;
-  width: 20px;
-  height: 20px;
-  transform: translateY(-50%)
+  bottom: 0;
+  width: 8px;
 }
 
 .flickity-button-icon path {
@@ -87,9 +116,9 @@
 }
 
 .flickity-prev-next-button.previous {
-   left: 0;
+   left: size(large);
 }
 
 .flickity-prev-next-button.next {
-  right: 0;
+  left: 60px;
 }

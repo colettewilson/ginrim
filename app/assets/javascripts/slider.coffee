@@ -10,6 +10,8 @@ class Slider
       pageDots: false
       prevNextButtons: true,
       wrapAround: true
+      imagesLoaded: true
+      percentPosition: false
     toggleOpenLabel: ".toggle-open"
     toggleCloseLabel: ".toggle-close"
     thumbnailsOpenClass: "thumbnails-open"
