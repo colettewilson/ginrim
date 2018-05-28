@@ -29,9 +29,11 @@
 			<li class="side-nav__item">
 				<a class="side-nav__link logo" href="/about">About</a>
 			</li>
-			<li class="side-nav__item">
-				<a class="side-nav__link logo" href="/artists-statement">Artist Statement</a>
-			</li>
+			{% if craft.entries.section('artistsStatement').status('live').first() != null %}
+				<li class="side-nav__item">
+					<a class="side-nav__link logo" href="/artists-statement">Artist Statement</a>
+				</li>
+			{% endif %}
 		</ul>
 	</div>
 </nav>
