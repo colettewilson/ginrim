@@ -8,9 +8,9 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: calc(100% / 12 * 3);
+    width: calc(100% / 12 * 2);
     height: 100vh;
-    padding: 0 size(large);
+    padding-left: size(large);
     overflow: scroll;
   }
 }
