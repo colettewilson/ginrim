@@ -22,11 +22,13 @@
 				<a class="side-nav__link logo" href="/editions">Editions</a>
 			</li>
 			<li class="side-nav__item">
-				<a class="side-nav__link logo" href="/about">About</a>
+				<a class="side-nav__link logo" href="/about">About / Contact</a>
 			</li>
-			<li class="side-nav__item">
-				<a class="side-nav__link logo" href="/artists-statement">Artist Statement</a>
-			</li>
+			{% if craft.entries.section('artistsStatement').status('live').first() != null %}
+				<li class="side-nav__item">
+					<a class="side-nav__link logo" href="/artists-statement">Artist's Statement</a>
+				</li>
+			{% endif %}
 		</ul>
 		<div class="side-nav__footer">
 			{% include "_shared/footer" %}
