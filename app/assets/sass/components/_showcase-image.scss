@@ -25,9 +25,29 @@
 
   @include breakpoint(large up) {
 
+    &.showcase-image--left {
+
+      img {
+        object-position: left;
+      }
+    }
+
+    &.showcase-image--center {
+
+      img {
+        margin: auto
+      }
+    }
+
+    &.showcase-image--right {
+
+      img {
+        object-position: right;
+      }
+    }
+
     img {
-      padding: size(large) * 2 size(large) size(large) * 2 size(large) * 2;
-      object-position: left;
+      padding: size(large) * 2;
     }
   }
 }

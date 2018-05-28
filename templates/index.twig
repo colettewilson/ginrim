@@ -2,7 +2,17 @@
 
 {% block content %}
 
-	<div class="showcase-image">
+	{% set positionClass %}
+		{% switch entry.featureImagePosition.value %}
+			{% case "right" %}
+				{{ "showcase-image--right" }}
+			{% case "center" %}
+				{{ "showcase-image--center" }}
+			{% default %}
+				{{ "showcase-image--left" }}
+		{% endswitch %}
+	{% endset %}
+	<div class="showcase-image {{ positionClass|trim }}">
 		<picture>
 			<img src="{{ entry.featureImage.first().url }}" alt="{{ entry.featureImage.first().title }}">
 		</picture>
