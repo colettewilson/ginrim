@@ -1,24 +1,47 @@
 .thumbnails {
   @include transition(visibility);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 100%;
-  width: 100%;
-  height: 100%;
-  padding: size(large) * 2;
+  width: 100vw;
+  height: 100vh;
   background: white;
+  padding: size(large) * 2 size(large) size(large);
+  overflow-y: scroll;
   visibility: hidden;
 
   &.thumbnails-open {
     left: 0;
     visibility: visible;
+    z-index: 5;
   }
+
+  @include breakpoint(large up) {
+    padding: size(large) * 2;
+    width: calc(100vw / 12 * 10);
+
+     &.thumbnails-open {
+       left: calc(100vw / 12 * 2);
+     }
+  }
+}
+
+.thumbnail {
+  display: block;
+  position: relative;
+  padding-bottom: 100%;
 }
 
 .thumbnail img {
   @include transition(filter);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .thumbnail img:hover {
-  filter: grayscale(20%) opacity(80%);
+  filter: grayscale(100%) opacity(60%);
 }

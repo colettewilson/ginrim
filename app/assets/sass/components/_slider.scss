@@ -11,12 +11,11 @@
 .slider__toggle {
   @include transition((background, transform));
   position: absolute;
-  top: size(large);
-  right: size(large);
-  padding-bottom: size(medium);
+  top: size(medium);
+  right: size(medium);
   font-size: 12px;
   cursor: pointer;
-  z-index: 5;
+  z-index: 10;
 
   span:nth-child(2) {
     display: none;
@@ -30,6 +29,14 @@
     span:nth-child(2) {
       display: block;
     }
+  }
+
+  @include breakpoint(medium up) {
+    right: size(large);
+  }
+
+  @include breakpoint(large up) {
+    top: size(large);
   }
 }
 

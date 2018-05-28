@@ -28,13 +28,11 @@
 				{% endfor %}
 			</div>
 			<div class="js-thumbnails thumbnails">
-				<div class="grid-x grid-margin-x small-up-2 medium-up-3 large-up-4">
+				<div class="grid-x grid-margin-x grid-margin-y small-up-2 medium-up-3 large-up-4">
 					{% for row in entry.sliderImages %}
 						<div class="cell">
-							<a class="js-slider-thumb" href="">
-								<picture class="thumbnail">
-									<img src="{{ row.image.first().getUrl('thumbnail') }}" alt="{{ row.image.first().title }}">
-								</picture>
+							<a class="js-slider-thumb thumbnail" href="">
+								<img src="{{ row.image.first().getUrl('thumbnail') }}" alt="{{ row.image.first().title }}">
 							</a>
 						</div>
 					{% endfor %}
