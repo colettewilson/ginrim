@@ -2,7 +2,10 @@
   position: relative;
   width: 100%;
   padding-top: size(large);
-  padding-right: size(large);
+
+  @include breakpoint(large up) {
+    padding-right: size(large);
+  }
 }
 
 .slider__toggle {
@@ -41,14 +44,13 @@
 .slide {
   display: flex;
   width: 100%;
-  height: auto;
+  height: calc(100vh - 80px);
   padding: size(large);
   align-items: center;
 
   img {
     width: 100%;
-    height: auto;
-    max-height: calc(100vh - 180px);
+    height: calc(100vh - 160px);
     object-fit: contain;
   }
 }
@@ -96,6 +98,10 @@
   left: 0;
   bottom: 0;
   font-size: 12px;
+
+  @include breakpoint(small only) {
+    text-align: center;
+  }
 }
 
 // Flickity overrides

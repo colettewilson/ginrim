@@ -1,31 +1,4 @@
 .footer {
-
-  li {
-    display: inline-block;
-    margin: 0 3px;
-  }
-
-  li:first-child {
-    margin-left: 0;
-  }
-
-  li:last-child {
-    margin-right: 0;
-  }
-
-  .icon {
-    width: 16px;
-    height: 16px;
-  }
-
-  @include breakpoint(medium down) {
-    display: flex;
-    flex-wrap: no-wrap;
-    justify-content: space-between;
-  }
-}
-
-.footer__copy {
   font-size: 12px;
 
   @include breakpoint(large up) {

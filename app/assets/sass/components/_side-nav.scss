@@ -41,6 +41,24 @@
   font-size: 12px;
 }
 
+.side-nav__item--inline {
+  display: inline-block;
+  margin: 0 3px;
+
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.side-nav__item--inline:first-child {
+  margin-left: 0;
+}
+
+.side-nav__item--inline:last-child {
+  margin-right: 0;
+}
+
 .side-nav__item:first-child {
   padding-top: 0;
 }

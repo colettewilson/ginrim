@@ -1,14 +1,3 @@
 <footer class="footer">
-	<ul>
-		{% for row in socialMedia.socialMediaLinks %}
-			<li>
-				<a href="{{ row.link }}">
-					<i class="icon icon--ui__{{ row.platform.value }}">
-						<svg focusable="false"><use xlink:href="/media/images/sprites/ui.svg#{{ row.platform.value }}"></use></svg>
-					</i>
-				</a>
-			</li>
-		{% endfor %}
-	</ul>
-	<p class="footer__copy">&copy;{{ siteName }} {{ "now"|date('Y') }}</p>
+	<p>&copy;{{ siteName }} {{ "now"|date('Y') }}</p>
 </footer>
