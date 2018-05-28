@@ -29,9 +29,9 @@
 			<li class="side-nav__item">
 				<a class="side-nav__link logo" href="/about">About</a>
 			</li>
-			{% if craft.entries.section('artistsStatement').status('live').first() != null %}
+			{% if craft.entries.section('contact').status('live').first() != null %}
 				<li class="side-nav__item">
-					<a class="side-nav__link logo" href="/artists-statement">Artist Statement</a>
+					<a class="side-nav__link logo" href="/artists-statement">Contact</a>
 				</li>
 			{% endif %}
 		</ul>
