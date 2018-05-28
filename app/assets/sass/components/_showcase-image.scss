@@ -12,9 +12,13 @@
   img {
     width: 100%;
     height: 100%;
-    padding: size(large) * 2 size(large);
+    padding: size(large) * 2 size(medium);
     object-fit: contain;
     object-position: left;
+  }
+
+  @include breakpoint(medium only) {
+    padding: size(large) * 2 size(large);
   }
 
   @include breakpoint(large up) {
