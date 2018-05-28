@@ -28,10 +28,9 @@
 }
 
 .project__item--inline {
-  display: flex;
-  flex-wrap: wrap;
 
   @include breakpoint(large up) {
+    display: flex;
     flex-wrap: nowrap;
 
     > .project__image:nth-child(odd) {
