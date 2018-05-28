@@ -23,13 +23,14 @@ $mobile-nav-icon-width: 22Px;
 .burger__top {
   margin-top: 0;
 
-  .burger.is-open & {
+  .burger.nav-is-open & {
     transform: translate(0, ($mobile-nav-icon-height + $mobile-nav-icon-gap)) rotate(45deg);
   }
 }
 
 .burger__middle {
-  .burger.is-open & {
+
+  .burger.nav-is-open & {
     transform: scaleX(0);
   }
 }
@@ -37,7 +38,7 @@ $mobile-nav-icon-width: 22Px;
 .burger__bottom {
   margin-bottom: 0;
 
-  .burger.is-open & {
+  .burger.nav-is-open & {
     transform: translate(0, -($mobile-nav-icon-height + $mobile-nav-icon-gap)) rotate(-45deg);
   }
 }

@@ -32,11 +32,13 @@ class Nav
     unless @isNavOpen
       @isNavOpen = true
       @$nav.addClass(@options.navOpenClass)
+      @$navTrigger.addClass(@options.navOpenClass)
 
   closeNav: =>
     if @isNavOpen
       @isNavOpen = false
       @$nav.removeClass(@options.navOpenClass)
+      @$navTrigger.removeClass(@options.navOpenClass)
 
   onDropdownTriggerClick: (evt) =>
     if !($(evt.target).hasClass("js-nav-dropdown-link"))

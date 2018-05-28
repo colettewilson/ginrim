@@ -36,6 +36,10 @@
 
 .header__nav__inner {
   width: 100%;
-  padding: size(large) * 2 size(large);
+  padding: size(large) * 2 size(medium);
   overflow-y: scroll;
+
+  @include breakpoint(medium only) {
+    padding: size(large) * 2 size(large);
+  }
 }
