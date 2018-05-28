@@ -12,6 +12,7 @@ app.setup = ->
     # A list of class names matched to components, e.g.:
     {class: "js-nav", Component: require("./nav")}
     {class: "js-slider", Component: require("./slider")}
+    {class: "js-lightbox", Component: require("./lightbox")}
   ])
 
   $document.ready(app.onDocumentReady)
