@@ -17,11 +17,7 @@
 						<div class="project__item project__item--inline {{ block.images|length < 2 ? positionClass|trim }}">
 							{% for row in block.images %}
 								<div class="project__image">
-									<div>
-										<picture>
-											<img src="{{ row.image.first().url }}" alt="{{ row.image.first().title }}">
-										</picture>
-									</div>
+									<img src="{{ row.image.first().url }}" alt="{{ row.image.first().title }}">
 									<div class="project__label">
 										<p>{{ row.imageLabel }}</p>
 									</div>
