@@ -79,6 +79,10 @@
     margin: 0 auto;
     object-fit: contain;
   }
+
+  @include breakpoint(small only) {
+    padding: size(large) size(medium);
+  }
 }
 
 .fmt--unpadded {
