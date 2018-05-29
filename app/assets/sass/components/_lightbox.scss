@@ -8,6 +8,7 @@
 }
 
 .featherlight .featherlight-content {
+  @include hide-scrollbars;
   background-color: transparent;
 
   @include breakpoint(medium down) {
