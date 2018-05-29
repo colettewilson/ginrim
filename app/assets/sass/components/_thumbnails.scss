@@ -1,4 +1,5 @@
 .thumbnails {
+  @include hide-scrollbars;
   @include transition(visibility);
   position: fixed;
   top: 0;

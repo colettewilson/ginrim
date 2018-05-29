@@ -5,6 +5,7 @@
   }
 
   @include breakpoint(large up) {
+    @include hide-scrollbars;
     position: fixed;
     top: 0;
     left: 0;
