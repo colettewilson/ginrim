@@ -18,7 +18,7 @@
 						{% endswitch %}
 					{% endset %}
 					<div class="js-slide slide {{ positionClass|trim }}">
-						<a class="js-gallery-item" href="{{ row.image.first().url }}">
+						<a class="js-gallery-item" href="{{ row.image.first().url }}" rel="project-{{ entry.id }}">
 							<img src="{{ row.image.first().url }}" alt="{{ row.image.first().title }}">
 						</a>
 						{% if row.imageLabel|trim is not empty %}

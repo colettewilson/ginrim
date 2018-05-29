@@ -1,3 +1,4 @@
+Hammer = require("hammerjs/hammer.js")
 featherlight = require("featherlight/src/featherlight.js")
 featherlightGallery = require("featherlight/src/featherlight.gallery.js")
 
@@ -18,7 +19,18 @@ class Lightbox
   constructor: (@$wrap) ->
     @options = Lightbox.defaults
     @$gallery = @$wrap.find(@options.gallery)
+    @hammer = new Hammer(@$wrap[0])
 
+    @hammer
+      .on("tap", @onTapEvt)
+      .on("pan swipe", @onSwipeEvt)
+
+  onTapEvt: (evt) =>
+    evt.preventDefault()
     @$gallery.featherlightGallery(@options.gallerySettings)
+
+  onSwipeEvt: (evt) =>
+    @$gallery.unbind("click.featherlight")
+
 
 module.exports = Lightbox
