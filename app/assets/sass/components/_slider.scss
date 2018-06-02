@@ -1,42 +1,47 @@
 .slider {
   position: relative;
   width: 100%;
-  padding-top: size(large);
-
-  @include breakpoint(large up) {
-    padding-right: size(large);
-  }
 }
 
 .slider__toggle {
   @include transition((background, transform));
   position: absolute;
-  top: size(medium);
-  right: size(medium);
+  top: 0;
+  right: 0;
   font-size: 12px;
   cursor: pointer;
   z-index: 10;
 
-  span:nth-child(2) {
+  .toggle-close {
     display: none;
   }
 
   &.thumbnails-open {
-    span:first-child {
+    .toggle-open {
       display: none;
     }
 
-    span:nth-child(2) {
+    .toggle-close {
       display: block;
     }
   }
 
   @include breakpoint(medium up) {
-    right: size(large);
+    right: 0;
   }
 
   @include breakpoint(large up) {
-    top: size(large);
+    top: 0;
+  }
+}
+
+.slider__toggle--fixed {
+  position: fixed;
+  top: size(large);
+  right: size(large);
+
+  @include breakpoint(small only) {
+    right: size(medium);
   }
 }
 
@@ -50,7 +55,7 @@
 
 .slide {
   display: flex;
-  width: 100%;
+  width: calc(100% + 80px);
   height: calc(100vh - 80px);
   padding: size(large);
   align-items: center;
@@ -74,7 +79,6 @@
   }
 
   .slide__label {
-    padding: 0 size(large) * 2;
     text-align: left;
   }
 }
@@ -86,7 +90,6 @@
   }
 
   .slide__label {
-    padding: 0 size(large) 0 size(large) * 2;
     text-align: right;
   }
 }
@@ -97,18 +100,16 @@
     margin: auto;
   }
   .slide__label {
-    padding: 0 size(large) * 2;
     text-align: center;
   }
 }
-
-
 
 .slide__label {
   position: absolute;
   width: 100%;
   left: 0;
   bottom: 0;
+  padding: 0 size(large) * 2;
   font-size: 12px;
 
   @include breakpoint(small only) {
@@ -134,9 +135,9 @@
 }
 
 .flickity-prev-next-button.previous {
-   left: size(large);
+   left: 0;
 }
 
 .flickity-prev-next-button.next {
-  left: 60px;
+  left: 20px;
 }

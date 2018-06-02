@@ -1,55 +1,67 @@
 <div class="grid-x align-center">
 	<div class="small-12 large-11 large-offset-1 cell">
-		<div class="slider">
-			<div class="js-slider-toggle slider__toggle">
-				<span class="toggle-open" aria-label="Open thumbnail view">Thumbnails</span>
-				<span class="toggle-close" aria-label="Close thumbnail view" aria-hidden="true">Close</span>
-			</div>
-			<div class="js-slider js-lightbox slider__inner">
-				{% for row in entry.sliderImages %}
-					{% set positionClass %}
-						{% switch row.imagePosition.value %}
-							{% case "right" %}
-								{{ "slide--right" }}
-							{% case "center" %}
-								{{ "slide--center" }}
-							{% default %}
-								{{ "slide--left" }}
-						{% endswitch %}
-					{% endset %}
-					<div class="js-slide slide {{ positionClass|trim }}">
-						<a class="js-gallery-item" href="{{ row.image.first().url }}" rel="project-{{ entry.id }}">
-							<img src="{{ row.image.first().url }}" alt="{{ row.image.first().title }}">
-						</a>
-						{% if row.imageLabel|trim is not empty %}
-							<div class="slide__label">
-								<p>{{ row.imageLabel }}</p>
-							</div>
-						{% endif %}
-					</div>
-				{% endfor %}
-			</div>
-			<div class="js-thumbnails thumbnails">
-				<div class="grid-x grid-margin-x grid-margin-y small-up-2 medium-up-3 large-up-4">
-					{% for row in entry.sliderImages %}
-						<div class="cell">
-							<a class="js-slider-thumb thumbnail" href="{{ row.image.first().getUrl('thumbnail') }}">
-								<img src="{{ row.image.first().getUrl('thumbnail') }}" alt="{{ row.image.first().title }}">
-							</a>
+		<div class="project">
+		{% for block in entry.projectBuilderHorizontal %}
+			{% switch block.type %}
+				{% case "slider" %}
+					<div class="project__item slider">
+						<div class="js-slider-toggle slider__toggle">
+							<span class="toggle-open" aria-label="Open thumbnail view">Thumbnails</span>
 						</div>
-					{% endfor %}
-				</div>
-			</div>
-		</div>
-		{% if entry.text|trim %}
-			<div class="grid-x">
-				<div class="large-8 cell">
-					<div class="fmt">
-						{{ entry.text }}
+						<div class="js-slider js-lightbox slider__inner">
+							{% for row in block.sliderImages %}
+								{% set positionClass %}
+									{% switch row.imagePosition.value %}
+										{% case "right" %}
+											{{ "slide--right" }}
+										{% case "center" %}
+											{{ "slide--center" }}
+										{% default %}
+											{{ "slide--left" }}
+									{% endswitch %}
+								{% endset %}
+								<div class="js-slide slide {{ positionClass|trim }}">
+									<a class="js-gallery-item" href="{{ row.image.first().url }}" rel="project-{{ entry.id }}">
+										<img src="{{ row.image.first().url }}" alt="{{ row.image.first().title }}">
+									</a>
+									{% if row.imageLabel|trim is not empty %}
+										<div class="slide__label">
+											<p>{{ row.imageLabel }}</p>
+										</div>
+									{% endif %}
+								</div>
+							{% endfor %}
+						</div>
+						<div class="js-thumbnails thumbnails">
+							<div class="grid-x grid-margin-x grid-margin-y small-up-2 medium-up-3 large-up-4">
+								<div class="js-slider-toggle slider__toggle slider__toggle--fixed">
+									<span class="toggle-close" aria-label="Close thumbnail view" aria-hidden="true">Close</span>
+								</div>
+								{% for row in block.sliderImages %}
+									<div class="cell">
+										<a class="js-slider-thumb thumbnail" href="{{ row.image.first().getUrl('thumbnail') }}">
+											<img src="{{ row.image.first().getUrl('thumbnail') }}" alt="{{ row.image.first().title }}">
+										</a>
+									</div>
+								{% endfor %}
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
-		{% endif %}
+				{% default %}
+					{% if block.text|trim %}
+						<div class="project__item">
+							<div class="grid-x">
+								<div class="large-8 cell">
+									<div class="fmt fmt--unpadded">
+										{{ block.text }}
+									</div>
+								</div>
+							</div>
+						</div>
+					{% endif %}
+			{% endswitch %}
+		{% endfor %}
+		</div>
 	</div>
 </div>
 
