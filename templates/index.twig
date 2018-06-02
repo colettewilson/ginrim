@@ -13,9 +13,17 @@
 		{% endswitch %}
 	{% endset %}
 	<div class="showcase-image {{ positionClass|trim }}">
-		<picture>
-			<img src="{{ entry.featureImage.first().url }}" alt="{{ entry.featureImage.first().title }}">
-		</picture>
+		{% if entry.featureImageLink %}
+			<a href="{{ entry.featureImageLink }}">
+				<picture>
+					<img src="{{ entry.featureImage.first().url }}" alt="{{ entry.featureImage.first().title }}">
+				</picture>
+			</a>
+		{% else %}
+			<picture>
+				<img src="{{ entry.featureImage.first().url }}" alt="{{ entry.featureImage.first().title }}">
+			</picture>
+		{% endif %}
 	</div>
 
 {% endblock %}
