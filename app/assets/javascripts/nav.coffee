@@ -15,21 +15,11 @@ class Nav
     @$dopdown = @$wrap.find(@options.dropdown)
     @minWidth = 1024
 
-    @setupNav()
-    $(window).on("resize", @resizeEvent)
+    @$navTrigger.on("click", @onNavTriggerClick)
     @$dopdownTrigger.on("click", @onDropdownTriggerClick)
 
-  resizeEvent: =>
-    @closeNav()
-    @setupNav()
-
-  setupNav: =>
-    if $(window).width() < @minWidth
-      @$navTrigger.on("click", @onNavTriggerClick)
-    else
-      @$navTrigger.off("click", @onNavTriggerClick)
-
   onNavTriggerClick: =>
+    console.log "something"
     if @isNavOpen then @closeNav() else @openNav()
 
   openNav: =>

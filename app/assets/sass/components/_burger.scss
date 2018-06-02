@@ -5,6 +5,7 @@ $mobile-nav-icon-width: 22Px;
 .burger {
   appearance: none;
   position: relative;
+  z-index: 10;
   cursor: pointer;
 
   @include breakpoint(large up) {
