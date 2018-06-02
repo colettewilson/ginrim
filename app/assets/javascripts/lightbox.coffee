@@ -26,11 +26,9 @@ class Lightbox
       .on("pan swipe", @onSwipeEvt)
 
   onTapEvt: (evt) =>
-    evt.preventDefault()
     @$gallery.featherlightGallery(@options.gallerySettings)
 
   onSwipeEvt: (evt) =>
     @$gallery.unbind("click.featherlight")
-
 
 module.exports = Lightbox
