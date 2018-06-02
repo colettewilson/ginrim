@@ -22,7 +22,7 @@ class Lightbox
     @hammer = new Hammer(@$wrap[0])
 
     @hammer
-      .on("click tap", @onTapEvt)
+      .on("click tap press", @onTapEvt)
       .on("pan swipe", @onSwipeEvt)
 
   onTapEvt: (evt) =>
