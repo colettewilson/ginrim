@@ -19,7 +19,6 @@ class Nav
     @$dopdownTrigger.on("click", @onDropdownTriggerClick)
 
   onNavTriggerClick: =>
-    console.log "something"
     if @isNavOpen then @closeNav() else @openNav()
 
   openNav: =>
