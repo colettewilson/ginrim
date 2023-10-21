@@ -1,7 +1,7 @@
 <div class="grid-x align-center">
 	<div class="small-12 large-11 large-offset-1 cell">
 		<div class="project">
-		{% for block in entry.projectBuilderHorizontal %}
+		{% for block in entry.projectBuilderHorizontal.all() %}
 			{% switch block.type %}
 				{% case "slider" %}
 					<div class="project__item slider">
@@ -9,7 +9,7 @@
 							<span class="toggle-open" aria-label="Open thumbnail view">Thumbnails</span>
 						</div>
 						<div class="js-slider js-lightbox slider__inner">
-							{% for row in block.sliderImages %}
+							{% for row in block.sliderImages.all() %}
 								{% set positionClass %}
 									{% switch row.imagePosition.value %}
 										{% case "right" %}
@@ -21,8 +21,8 @@
 									{% endswitch %}
 								{% endset %}
 								<div class="js-slide slide {{ positionClass|trim }}">
-									<a class="js-gallery-item" href="{{ row.image.first().url }}" rel="project-{{ entry.id }}">
-										<img src="{{ row.image.first().url }}" alt="{{ row.image.first().title }}">
+									<a class="js-gallery-item" href="{{ row.image.one().url }}" rel="project-{{ entry.id }}">
+										<img src="{{ row.image.one().url }}" alt="{{ row.image.one().title }}">
 									</a>
 									{% if row.imageLabel|trim is not empty %}
 										<div class="slide__label">
@@ -37,10 +37,10 @@
 								<div class="js-slider-toggle slider__toggle slider__toggle--fixed">
 									<span class="toggle-close" aria-label="Close thumbnail view" aria-hidden="true">Close</span>
 								</div>
-								{% for row in block.sliderImages %}
+								{% for row in block.sliderImages.all() %}
 									<div class="cell">
-										<a class="js-slider-thumb thumbnail" href="{{ row.image.first().getUrl('thumbnail') }}">
-											<img src="{{ row.image.first().getUrl('thumbnail') }}" alt="{{ row.image.first().title }}">
+										<a class="js-slider-thumb thumbnail" href="{{ row.image.one().getUrl('thumbnail') }}">
+											<img src="{{ row.image.one().getUrl('thumbnail') }}" alt="{{ row.image.one().title }}">
 										</a>
 									</div>
 								{% endfor %}

@@ -1,0 +1,21 @@
+fieldLayouts:
+  dfe1bb64-f568-434e-93c5-0c16410436e2:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 90150e6a-b714-4f66-90ea-1680e9f6dbf2
+            required: true
+            type: craft\fieldlayoutelements\CustomField
+        name: Content
+        sortOrder: 1
+handle: horizontalLayout
+hasTitleField: true
+name: 'Horizontal Layout'
+section: 24e3ccc2-f9d4-4566-9d62-f3fe2c34aaa0
+sortOrder: 1
+titleFormat: null

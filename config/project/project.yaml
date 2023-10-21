@@ -1,0 +1,41 @@
+dateModified: 1697480482
+email:
+  fromEmail: colette@builtbybuffalo.com
+  fromName: 'Gin Rimmington'
+  transportType: craft\mail\transportadapters\Sendmail
+graphql:
+  publicToken:
+    enabled: false
+    expiryDate: null
+plugins:
+  assetrev:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  redactor:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 2.0.0
+    settings: null
+  super-table:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 2.2.1
+    settings: null
+  twigpack:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: solo
+  live: true
+  name: 'Gin Rimmington Jones'
+  schemaVersion: 3.5.13
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

@@ -1,0 +1,44 @@
+contentColumnType: string
+fieldGroup: 7b578773-6463-427d-8aed-f17a94a6394e
+handle: featureImagePosition
+instructions: ''
+name: 'Feature Image Position'
+searchable: true
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - default
+          - '1'
+        -
+          - label
+          - Left
+        -
+          - value
+          - left
+    -
+      __assoc__:
+        -
+          - default
+          - ''
+        -
+          - label
+          - Center
+        -
+          - value
+          - center
+    -
+      __assoc__:
+        -
+          - default
+          - ''
+        -
+          - label
+          - Right
+        -
+          - value
+          - right
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

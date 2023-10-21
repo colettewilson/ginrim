@@ -1,0 +1,16 @@
+contentColumnType: text
+fieldGroup: e99eb73a-c05e-48fc-9878-97ae3f03c886
+handle: generalMetaDescription
+instructions: 'This should be a brief site description roughly no more than 160 characters. This description will be displayed in search engine results. Be sure to include relevant words such as photography or landscape.'
+name: 'General Meta Description'
+searchable: true
+settings:
+  charLimit: ''
+  code: ''
+  columnType: text
+  initialRows: '4'
+  multiline: '1'
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

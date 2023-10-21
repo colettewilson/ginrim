@@ -1,0 +1,16 @@
+contentColumnType: text
+fieldGroup: 7b578773-6463-427d-8aed-f17a94a6394e
+handle: featureImageLink
+instructions: ''
+name: 'Feature Image Link'
+searchable: true
+settings:
+  charLimit: ''
+  code: ''
+  columnType: text
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

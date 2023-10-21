@@ -1,0 +1,18 @@
+contentColumnType: string
+fieldGroup: e99eb73a-c05e-48fc-9878-97ae3f03c886
+handle: pageSpecificMetaDescription
+instructions: 'This is optional but good practice. Similar to the general meta description your page specific descriptions should be roughly no more than 160 characters. Try to make it relevant to the page, for e.g. you may have a project specific description that describes themes from that project.'
+name: 'Page Specific Meta Description'
+searchable: '1'
+settings:
+  columns: null
+  contentTable: '{{%stc_pagespecificmetadescription}}'
+  fieldLayout: row
+  localizeBlocks: false
+  maxRows: ''
+  minRows: ''
+  selectionLabel: ''
+  staticField: ''
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

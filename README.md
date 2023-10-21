@@ -66,7 +66,7 @@ Use markup similar to:
 
 ```html
 <i class="icon icon--{spritename}__{iconname}">
-	<svg focusable="false"><use xlink:href="/media/images/sprites/{spritename}.svg#{iconname}"></use></svg>
+	<svg focusable="false"><use xlink:href="/dist/sprites/{spritename}.svg#{iconname}"></use></svg>
 </i>
 ```
 
@@ -74,7 +74,7 @@ e.g. If a sprite exists named _ui_ which contains an icon file named  _logo.svg_
 
 ```html
 <i class="icon icon--ui__logo">
-	<svg focusable="false"><use xlink:href="/media/images/sprites/ui.svg#logo"></use></svg>
+	<svg focusable="false"><use xlink:href="/dist/sprites/ui.svg#logo"></use></svg>
 </i>
 ```
 

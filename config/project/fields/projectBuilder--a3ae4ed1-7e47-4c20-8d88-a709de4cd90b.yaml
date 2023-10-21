@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 14803bdd-780f-4145-af7f-a9d8451c2050
+handle: projectBuilder
+instructions: ''
+name: 'Project Builder (Vertical)'
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_projectbuilder}}'
+  localizeBlocks: false
+  maxBlocks: ''
+  minBlocks: ''
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

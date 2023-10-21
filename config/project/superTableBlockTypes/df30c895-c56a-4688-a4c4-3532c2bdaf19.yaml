@@ -1,0 +1,64 @@
+field: c979b298-78f7-44d4-b65a-a00194f43707
+fieldLayouts:
+  834f5d51-7e72-42a6-a4d2-a40ffd0d2e44:
+    tabs:
+      -
+        fields:
+          25aa1436-cb1e-4587-aa00-4ed3d16e7187:
+            required: '1'
+            sortOrder: '1'
+          d520807c-2e20-46ec-bc4d-91db98c013bd:
+            required: '1'
+            sortOrder: '2'
+        name: Content
+        sortOrder: '1'
+fields:
+  25aa1436-cb1e-4587-aa00-4ed3d16e7187:
+    contentColumnType: string
+    fieldGroup: null
+    handle: platform
+    instructions: ''
+    name: Platform
+    searchable: '1'
+    settings:
+      options:
+        -
+          default: ''
+          label: Facebook
+          value: social-fb
+        -
+          default: ''
+          label: Twitter
+          value: social-tw
+        -
+          default: ''
+          label: Instagram
+          value: social-in
+        -
+          default: ''
+          label: Flickr
+          value: social-fl
+        -
+          default: ''
+          label: 'Linked In'
+          value: social-li
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  d520807c-2e20-46ec-bc4d-91db98c013bd:
+    contentColumnType: text
+    fieldGroup: null
+    handle: accountLink
+    instructions: ''
+    name: Link
+    searchable: '1'
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText

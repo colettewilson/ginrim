@@ -1,7 +1,7 @@
 <div class="grid-x">
 	<div class="small-12 medium-10 large-8 large-offset-1 cell">
 		<div class="js-lightbox project">
-			{% for block in entry.projectBuilder %}
+			{% for block in entry.projectBuilder.all() %}
 				{% switch block.type %}
 					{% case "halfWidthImages" %}
 						{% set positionClass %}
@@ -15,27 +15,35 @@
 							{% endswitch %}
 						{% endset %}
 						<div class="project__item project__item--inline {{ block.images|length < 2 ? positionClass|trim }}">
-							{% for row in block.images %}
-								<div class="project__image">
-									<a class="js-gallery-item" href="{{ row.image.first().url }}">
-										<img src="{{ row.image.first().url }}" alt="{{ row.image.first().title }}">
-									</a>
-									<div class="project__label">
-										<p>{{ row.imageLabel }}</p>
+							{% for row in block.images.all() %}
+								{% if row.image|length %}
+									<div class="project__image">
+										<a class="js-gallery-item" href="{{ row.image.one().url }}">
+											<img src="{{ row.image.one().url }}" alt="{{ row.image.one().title }}">
+										</a>
+										{% if row.imageLabel|trim is not empty %}
+											<div class="project__label">
+												<p>{{ row.imageLabel }}</p>
+											</div>
+										{% endif %}
 									</div>
-								</div>
+								{% endif %}
 							{% endfor %}
 						</div>
 					{% case "fullwidthImages" %}
-						{% for row in block.images %}
-							<div class="project__item">
-								<a class="js-gallery-item" href="{{ row.image.first().url }}">
-									<img src="{{ row.image.first().url }}" alt="{{ row.image.first().title }}">
-								</a>
-								<div class="project__label">
-									<p>{{ row.imageLabel }}</p>
+						{% for row in block.images.all() %}
+							{% if row.image is not empty %}
+								<div class="project__item">
+									<a class="js-gallery-item" href="{{ row.image.one().url }}">
+										<img src="{{ row.image.one().url }}" alt=" row.image.one().title  }}">
+									</a>
+									{% if row.imageLabel %}
+										<div class="project__label">
+											<p>{{ row.imageLabel }}</p>
+										</div>
+									{% endif %}
 								</div>
-							</div>
+							{% endif %}
 						{% endfor %}
 					{% default %}
 						<div class="project__item">

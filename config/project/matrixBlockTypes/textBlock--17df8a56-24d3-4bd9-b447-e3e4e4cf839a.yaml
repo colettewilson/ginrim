@@ -1,0 +1,33 @@
+field: a3ae4ed1-7e47-4c20-8d88-a709de4cd90b
+fieldLayouts:
+  96dfc937-124e-4f62-a763-1da3e4dbccb4:
+    tabs:
+      -
+        fields:
+          18419b7d-4468-43e0-9b4a-165965c3c773:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  18419b7d-4468-43e0-9b4a-165965c3c773:
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: ''
+    name: Text
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: '1'
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+handle: textBlock
+name: 'Text Block'
+sortOrder: 3

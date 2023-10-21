@@ -1,0 +1,84 @@
+field: ec0606ae-39c4-4061-bc84-8b28fa99790f
+fieldLayouts:
+  1c6401c9-56cd-4698-93b8-3cfcde7f1be8:
+    tabs:
+      -
+        fields:
+          92c7bb75-3053-4ef9-a2ad-156c60fb45bd:
+            required: '1'
+            sortOrder: '1'
+          aec1f467-1729-4cfc-934f-9820322d0acc:
+            required: '0'
+            sortOrder: '2'
+          df16bd36-31c9-4525-bab5-b1d7dd083d18:
+            required: '0'
+            sortOrder: '3'
+        name: Content
+        sortOrder: '1'
+fields:
+  92c7bb75-3053-4ef9-a2ad-156c60fb45bd:
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: ''
+    name: Image
+    searchable: '1'
+    settings:
+      allowedKinds: null
+      defaultUploadLocationSource: 'folder:5b776bc7-f727-4432-89ff-9657fa41dd4d'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: ''
+      selectionLabel: ''
+      singleUploadLocationSource: 'folder:5b776bc7-f727-4432-89ff-9657fa41dd4d'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: '1'
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  aec1f467-1729-4cfc-934f-9820322d0acc:
+    contentColumnType: text
+    fieldGroup: null
+    handle: imageLabel
+    instructions: ''
+    name: 'Image Label'
+    searchable: '1'
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  df16bd36-31c9-4525-bab5-b1d7dd083d18:
+    contentColumnType: string
+    fieldGroup: null
+    handle: imagePosition
+    instructions: ''
+    name: 'Image Position'
+    searchable: '1'
+    settings:
+      options:
+        -
+          default: '1'
+          label: Left
+          value: left
+        -
+          default: ''
+          label: Center
+          value: center
+        -
+          default: ''
+          label: Right
+          value: right
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown

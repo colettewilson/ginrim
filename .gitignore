@@ -1,14 +1,14 @@
 ### Compiled media ###
-/public/media/stylesheets/app.css
-/public/media/stylesheets/fonts.css
-/public/media/javascripts/app.js
-/public/media/javascripts/fonts.js
+/web/media/stylesheets/app.css
+/web/media/stylesheets/fonts.css
+/web/media/javascripts/app.js
+/web/media/javascripts/fonts.js
 /app/assets/sprites/*/_sprite.scss
 /app/assets/sprites/*/sprite.html
 .sass-cache/
 
 ### CMS media ###
-/public/uploads/images/*
+/web/uploads/images/*
 
 # Yarn
 /node_modules

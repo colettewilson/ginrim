@@ -13,12 +13,12 @@
 <nav class="js-mobile-nav header__nav">
 	<div class="header__nav__inner">
 		<ul class="side-nav__list">
-			<li class="js-nav-dropdown-trigger side-nav__item">
-					<a class="side-nav__link" href="">Works</a>
+			<li class="side-nav__item">
+					<a class="js-nav-dropdown-trigger side-nav__link" href="">Works</a>
 					<ul class="js-nav-dropdown side-nav__dropdown">
-						{% for project in craft.entries.section("Project") %}
+						{% for project in craft.entries.section("Project").all() %}
 							<li class="side-nav__item">
-								<a class="js-nav-dropdown-link side-nav__link" href="{{ project.url }}">{{ project.title }}</a>
+								<a class="js-nav-dropdown-link side-nav__link" href="/project/{{ project.slug }}">{{ project.title }}</a>
 							</li>
 						{% endfor %}
 					</ul>
@@ -29,18 +29,18 @@
 			<li class="side-nav__item">
 				<a class="side-nav__link logo" href="/about">About</a>
 			</li>
-			{% if craft.entries.section('contact').status('live').first() != null %}
+			{% if craft.entries.section('contact').status('live').one() != null %}
 				<li class="side-nav__item">
 					<a class="side-nav__link logo" href="/artists-statement">Contact</a>
 				</li>
 			{% endif %}
 		</ul>
 		<ul class="side-nav__list">
-			{% for row in socialMedia.socialMediaLinks %}
+			{% for row in socialMedia.socialMediaLinks.all() %}
 				<li class="side-nav__item--inline">
 					<a href="{{ row.accountLink }}">
 						<i class="icon icon--ui__{{ row.platform.value }}">
-							<svg focusable="false"><use xlink:href="/media/images/sprites/ui.svg#{{ row.platform.value }}"></use></svg>
+							<svg focusable="false"><use xlink:href="{{ craft.twigpack.getModuleUri("spritemap.svg") }}#{{ row.platform.value }}"></use></svg>
 						</i>
 					</a>
 				</li>

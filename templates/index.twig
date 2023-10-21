@@ -16,12 +16,12 @@
 		{% if entry.featureImageLink %}
 			<a href="{{ entry.featureImageLink }}">
 				<picture>
-					<img src="{{ entry.featureImage.first().url }}" alt="{{ entry.featureImage.first().title }}">
+					<img src="{{ entry.featureImage.one().url }}" alt="{{ entry.featureImage.one().title }}">
 				</picture>
 			</a>
 		{% else %}
 			<picture>
-				<img src="{{ entry.featureImage.first().url }}" alt="{{ entry.featureImage.first().title }}">
+				<img src="{{entry.featureImage.one().url }}" alt="{{ entry.featureImage.one().title }}">
 			</picture>
 		{% endif %}
 	</div>

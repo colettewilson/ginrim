@@ -1,0 +1,21 @@
+fieldLayouts:
+  eeb35056-df88-4350-b182-f9fdf40b8c72:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: null
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: eeac6536-12cf-40bd-9fcc-03770dde9221
+            required: true
+            type: craft\fieldlayoutelements\CustomField
+        name: Content
+        sortOrder: 1
+handle: editions
+hasTitleField: false
+name: 'Print Editions'
+section: 6dc22fb3-ff7e-4123-928f-c77c54af5138
+sortOrder: 1
+titleFormat: '{section.name|raw}'

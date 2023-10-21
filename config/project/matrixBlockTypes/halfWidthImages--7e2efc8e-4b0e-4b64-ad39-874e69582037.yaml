@@ -1,0 +1,82 @@
+field: a3ae4ed1-7e47-4c20-8d88-a709de4cd90b
+fieldLayouts:
+  21730137-a371-4162-ac20-027407193b56:
+    tabs:
+      -
+        fields:
+          bb051b6f-4e34-4a8f-83ce-70157e10f712:
+            required: false
+            sortOrder: 1
+          d4c5d420-440a-4f4b-96f6-09edf667edd7:
+            required: false
+            sortOrder: 2
+        name: Content
+        sortOrder: 1
+fields:
+  bb051b6f-4e34-4a8f-83ce-70157e10f712:
+    contentColumnType: string
+    fieldGroup: null
+    handle: images
+    instructions: ''
+    name: Images
+    searchable: '1'
+    settings:
+      columns: null
+      contentTable: '{{%stc_2_images}}'
+      fieldLayout: row
+      localizeBlocks: false
+      maxRows: ''
+      minRows: ''
+      selectionLabel: ''
+      staticField: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+  d4c5d420-440a-4f4b-96f6-09edf667edd7:
+    contentColumnType: string
+    fieldGroup: null
+    handle: imagePosition
+    instructions: 'In instances where only 1 halfwidth image is selected please specify the alignment.'
+    name: 'Image Position'
+    searchable: true
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - default
+              - '1'
+            -
+              - label
+              - Left
+            -
+              - value
+              - left
+        -
+          __assoc__:
+            -
+              - default
+              - ''
+            -
+              - label
+              - Right
+            -
+              - value
+              - right
+        -
+          __assoc__:
+            -
+              - default
+              - ''
+            -
+              - label
+              - Center
+            -
+              - value
+              - center
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+handle: halfWidthImages
+name: 'Halfwidth Images'
+sortOrder: 2

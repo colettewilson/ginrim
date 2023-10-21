@@ -1,0 +1,18 @@
+contentColumnType: string
+fieldGroup: 0d25b3a6-0073-4332-9aeb-539158f37f61
+handle: socialMediaLinks
+instructions: ''
+name: 'Social Media Links'
+searchable: '1'
+settings:
+  columns: null
+  contentTable: '{{%stc_socialmedialinks}}'
+  fieldLayout: row
+  localizeBlocks: false
+  maxRows: ''
+  minRows: ''
+  selectionLabel: ''
+  staticField: ''
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

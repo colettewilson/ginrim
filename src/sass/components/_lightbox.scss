@@ -1,0 +1,22 @@
+// overrides
+.fslightbox-container {
+  background: rgba(white, 0.9) !important;
+  overflow: initial;
+}
+
+.fslightbox-slide-number-container {
+  color: black !important;
+}
+
+.fslightbox-slash {
+  background: black !important;
+}
+
+.fslightbox-toolbar,
+.fslightbox-slide-btn {
+  background: none !important;
+}
+
+.fslightbox-svg-path {
+  fill: #000000 !important;
+}

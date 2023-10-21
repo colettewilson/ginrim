@@ -1,0 +1,21 @@
+fieldLayouts:
+  9efb2562-8e69-4537-ad25-40ced4eb023e:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: null
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: eeac6536-12cf-40bd-9fcc-03770dde9221
+            required: true
+            type: craft\fieldlayoutelements\CustomField
+        name: Content
+        sortOrder: 1
+handle: contact
+hasTitleField: false
+name: Contact
+section: 1f787232-a4b9-4935-a95e-e11f341c31f4
+sortOrder: 1
+titleFormat: '{section.name|raw}'

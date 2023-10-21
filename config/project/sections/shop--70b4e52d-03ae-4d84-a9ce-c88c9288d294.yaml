@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: shop
+name: Shop
+propagationMethod: all
+siteSettings:
+  cc69bd3e-bdf8-4427-a574-06189e4b1382:
+    enabledByDefault: true
+    hasUrls: true
+    template: shop
+    uriFormat: shop
+type: single

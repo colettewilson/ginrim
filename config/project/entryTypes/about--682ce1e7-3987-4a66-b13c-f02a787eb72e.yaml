@@ -1,0 +1,21 @@
+fieldLayouts:
+  cc0473b1-4a0b-4ae0-826d-8d859bd5f67d:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: eeac6536-12cf-40bd-9fcc-03770dde9221
+            required: true
+            type: craft\fieldlayoutelements\CustomField
+        name: Content
+        sortOrder: 1
+handle: about
+hasTitleField: true
+name: Bio
+section: 2af2fd04-95e0-4b9d-9437-851ec61654d2
+sortOrder: 1
+titleFormat: null

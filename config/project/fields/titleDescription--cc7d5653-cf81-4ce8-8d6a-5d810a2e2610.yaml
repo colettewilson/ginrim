@@ -1,0 +1,16 @@
+contentColumnType: text
+fieldGroup: e99eb73a-c05e-48fc-9878-97ae3f03c886
+handle: titleDescription
+instructions: 'This is a very brief description containing no more that 4/5 words.'
+name: 'Title Description'
+searchable: true
+settings:
+  charLimit: ''
+  code: ''
+  columnType: text
+  initialRows: '4'
+  multiline: ''
+  placeholder: 'Brighton-based landscape photographer '
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

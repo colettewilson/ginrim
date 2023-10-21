@@ -1,0 +1,45 @@
+// Override default Ecwid index styles
+.grid-product__title-inner {
+  font-size: 1rem !important;
+}
+
+.grid-product__price-amount {
+  font-size: 1.25rem !important;
+  font-weight: 400 !important;
+}
+
+.grid__products.grid__products--large-items {
+  display: grid !important;
+  margin: 0 !important;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.grid-product {
+  width: 100% !important;
+  grid-columns: span 1;
+}
+
+.grid-product__wrap {
+  padding: 0 !important;
+}
+
+// Override default Ecwid product styles
+.ecwid-productBrowser {
+  padding: 0 !important;
+}
+
+.details-gallery__thumbs {
+  justify-content: flex-start !important;
+}
+
+.product-details__product-title.ec-header-h3 {
+  margin-bottom: 0 !important;
+  font-size: 1.25rem !important;
+  font-weight: 400 !important;
+  text-transform: uppercase;
+}
+
+.details-product-price__value.ec-price-item.notranslate {
+  font-size: 1rem !important;
+}

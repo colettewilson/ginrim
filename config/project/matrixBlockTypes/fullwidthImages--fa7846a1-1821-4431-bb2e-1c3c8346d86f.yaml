@@ -1,0 +1,34 @@
+field: a3ae4ed1-7e47-4c20-8d88-a709de4cd90b
+fieldLayouts:
+  31a2ed1f-7df7-4e79-a504-59c43daf804e:
+    tabs:
+      -
+        fields:
+          0027543d-8723-4038-b604-82979cbfe8fd:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  0027543d-8723-4038-b604-82979cbfe8fd:
+    contentColumnType: string
+    fieldGroup: null
+    handle: images
+    instructions: ''
+    name: Images
+    searchable: '1'
+    settings:
+      columns: null
+      contentTable: '{{%stc_1_images}}'
+      fieldLayout: row
+      localizeBlocks: false
+      maxRows: ''
+      minRows: ''
+      selectionLabel: ''
+      staticField: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+handle: fullwidthImages
+name: 'Fullwidth Images'
+sortOrder: 1

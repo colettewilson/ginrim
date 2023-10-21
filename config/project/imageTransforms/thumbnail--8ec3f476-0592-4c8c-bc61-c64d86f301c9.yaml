@@ -1,0 +1,9 @@
+format: png
+handle: thumbnail
+height: 500
+interlace: none
+mode: fit
+name: Thumbnail
+position: center-center
+quality: 100
+width: 500

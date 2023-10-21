@@ -1,0 +1,21 @@
+fieldLayouts:
+  73b65757-0e8e-44cc-938c-f2bd6055ed69:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: a3ae4ed1-7e47-4c20-8d88-a709de4cd90b
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'Tab 1'
+        sortOrder: 1
+handle: verticalLayout
+hasTitleField: true
+name: 'Vertical Layout'
+section: 24e3ccc2-f9d4-4566-9d62-f3fe2c34aaa0
+sortOrder: 2
+titleFormat: null

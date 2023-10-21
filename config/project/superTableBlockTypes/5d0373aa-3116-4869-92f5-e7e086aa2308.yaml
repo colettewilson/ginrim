@@ -1,0 +1,57 @@
+field: a3ae4ed1-7e47-4c20-8d88-a709de4cd90b
+fieldLayouts:
+  96074beb-9690-4052-8240-7a51f4711d87:
+    tabs:
+      -
+        fields:
+          3d8ea357-b08b-450e-ab0b-fee7ceeea048:
+            required: '0'
+            sortOrder: '2'
+          f6a9f1ad-d21e-4f02-92d7-4679c38aa18f:
+            required: '1'
+            sortOrder: '1'
+        name: Content
+        sortOrder: '1'
+fields:
+  3d8ea357-b08b-450e-ab0b-fee7ceeea048:
+    contentColumnType: text
+    fieldGroup: null
+    handle: imageLabel
+    instructions: ''
+    name: 'Image Label'
+    searchable: '1'
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  f6a9f1ad-d21e-4f02-92d7-4679c38aa18f:
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: ''
+    name: Image
+    searchable: '1'
+    settings:
+      allowedKinds: null
+      defaultUploadLocationSource: 'folder:5b776bc7-f727-4432-89ff-9657fa41dd4d'
+      defaultUploadLocationSubpath: ''
+      limit: ''
+      localizeRelations: false
+      restrictFiles: ''
+      selectionLabel: ''
+      singleUploadLocationSource: 'folder:5b776bc7-f727-4432-89ff-9657fa41dd4d'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets

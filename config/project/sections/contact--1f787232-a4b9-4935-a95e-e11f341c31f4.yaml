@@ -1,0 +1,15 @@
+enableVersioning: true
+handle: contact
+name: Contact
+previewTargets:
+  -
+    label: 'Primary entry page'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  cc69bd3e-bdf8-4427-a574-06189e4b1382:
+    enabledByDefault: true
+    hasUrls: true
+    template: default/_entry
+    uriFormat: artists-statement
+type: single
