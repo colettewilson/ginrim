@@ -1,4 +1,6 @@
 ### Compiled media ###
+/dist
+/web/dist/*
 /web/media/stylesheets/app.css
 /web/media/stylesheets/fonts.css
 /web/media/javascripts/app.js

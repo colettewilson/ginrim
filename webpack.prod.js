@@ -6,6 +6,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const { WebpackManifestPlugin } = require("webpack-manifest-plugin")
 
 const prodConfig = {
+  mode: "production",
+  target: "web",
   output: {
     path: path.resolve(__dirname, "./web/dist"),
     filename: "[name].[contenthash].js"
