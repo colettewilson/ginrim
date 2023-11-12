@@ -4,32 +4,15 @@ fieldLayouts:
     tabs:
       -
         fields:
-          384a4377-4b32-4dd9-af7f-82c56da9cbde:
-            required: '0'
-            sortOrder: '2'
           80c0ab49-c65d-4661-aee0-edddf1a98148:
             required: '0'
             sortOrder: '1'
+          384a4377-4b32-4dd9-af7f-82c56da9cbde:
+            required: '0'
+            sortOrder: '2'
         name: Content
         sortOrder: '1'
 fields:
-  384a4377-4b32-4dd9-af7f-82c56da9cbde:
-    contentColumnType: text
-    fieldGroup: null
-    handle: imageLabel
-    instructions: ''
-    name: 'Image Label'
-    searchable: '1'
-    settings:
-      charLimit: ''
-      code: ''
-      columnType: text
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
   80c0ab49-c65d-4661-aee0-edddf1a98148:
     contentColumnType: string
     fieldGroup: null
@@ -55,3 +38,20 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
+  384a4377-4b32-4dd9-af7f-82c56da9cbde:
+    contentColumnType: text
+    fieldGroup: null
+    handle: imageLabel
+    instructions: ''
+    name: 'Image Label'
+    searchable: '1'
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText

@@ -1,4 +1,4 @@
-dateModified: 1697480482
+dateModified: 1699782287
 email:
   fromEmail: colette@builtbybuffalo.com
   fromName: 'Gin Rimmington'
@@ -7,6 +7,10 @@ graphql:
   publicToken:
     enabled: false
     expiryDate: null
+meta:
+  __names__:
+    0ecbf7a1-6479-4d8b-80a4-997f8427fcac: SEO # SEO
+    8725841d-29a6-420b-b616-3266c04c7b36: 'Social Media' # Social Media
 plugins:
   assetrev:
     enabled: '1'
@@ -31,7 +35,7 @@ system:
   edition: solo
   live: true
   name: 'Gin Rimmington Jones'
-  schemaVersion: 3.5.13
+  schemaVersion: 3.8.0.1
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

@@ -3,12 +3,12 @@ fieldLayouts:
     tabs:
       -
         fields:
-          281428de-1aeb-4e21-8b48-be35916efab2:
-            required: false
-            sortOrder: 3
           56cd64d7-3b65-4812-a7ea-e5f99e7386dd:
             required: true
             sortOrder: 2
+          281428de-1aeb-4e21-8b48-be35916efab2:
+            required: false
+            sortOrder: 3
           cc7d5653-cf81-4ce8-8d6a-5d810a2e2610:
             required: false
             sortOrder: 1
@@ -16,3 +16,4 @@ fieldLayouts:
         sortOrder: 1
 handle: seo
 name: SEO
+sortOrder: 1
