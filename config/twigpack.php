@@ -6,7 +6,7 @@ return [
     // If `devMode` is on, use webpack-dev-server to all for HMR (hot module reloading)
     'useDevServer' => false,
     // Enforce Absolute URLs on includes
-    'useAbsoluteUrl' => true,
+    'useAbsoluteUrl' => false,
     // The JavaScript entry from the manifest.json to inject on Twig error pages
     // This can be a string or an array of strings
     'errorEntry' => 'app.js',
@@ -14,13 +14,13 @@ return [
     'cacheKeySuffix' => '',
     // Manifest file names
     'manifest' => [
-      'legacy' => 'manifest-legacy.json',
+      'legacy' => 'manifest.json',
       'modern' => 'manifest.json',
     ],
     // Public server config
     'server' => [
       'manifestPath' => '@webroot/dist/',
-      'publicPath' => '@webroot/dist/',
+      'publicPath' => '@webroot/',
     ],
     // webpack-dev-server config
     'devServer' => [
@@ -37,7 +37,7 @@ return [
     // Local files config
     // Local files config
     'localFiles' => [
-      'basePath' => '@web/dist/',
+      'basePath' => '@webroot/',
     ],
   ],
   // Live (production) environment

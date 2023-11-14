@@ -1,3 +1,5 @@
+{% set path = getenv('ENVIRONMENT') == 'production' ? '/web/dist/' : '/' %}
+
 <!doctype html>
 <html lang="en" class="feature--no-js">
 	<head>
@@ -14,9 +16,10 @@
 		<meta name="description" content="{{ description|trim is empty ? seo.generalMetaDescription : description }}">
 
 		<link rel="stylesheet" href="/media/stylesheets/fonts.css" />
-		{{ craft.twigpack.includeCssModule("app.css") }}
+		<link rel="stylesheet" href="{{ path }}{{ craft.twigpack.getModuleUri("app.css")  }}" />
 		<script src="/media/javascripts/modernizr.js"></script>
-		{{ craft.twigpack.includeJsModule("app.js") }}
+		{# {{ craft.twigpack.includeJsModule("app.js") }} #}
+		<script src={{ path }}{{ craft.twigpack.getModuleUri("app.js") }}"></script>
 
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
